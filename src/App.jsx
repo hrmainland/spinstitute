@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { AppBar, Toolbar, Tabs, Tab, Box, ThemeProvider, IconButton, Menu, MenuItem } from '@mui/material';
+import { AppBar, Toolbar, Tabs, Tab, Box, ThemeProvider, IconButton, Menu, MenuItem, CssBaseline } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import theme from './theme';
 import Home from './pages/Home';
@@ -50,6 +50,7 @@ function AppContent() {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', overscrollBehavior: 'none' }}>
           <AppBar
             position="fixed"
@@ -191,11 +192,6 @@ function AppContent() {
     </ThemeProvider>
   );
 }
-
 export default function App() {
-  return (
-    <Router>
-      <AppContent />
-    </Router>
-  );
+  return <AppContent />;
 }
