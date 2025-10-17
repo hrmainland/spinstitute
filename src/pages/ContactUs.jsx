@@ -48,10 +48,21 @@ export default function ContactUs() {
   ];
 
   return (
-    <Box sx={{ py: { xs: 6, md: 10 } }}>
+    <Box sx={{ py: { xs: 4, md: 6 } }}>
       <Container maxWidth="lg">
         {/* Page Header */}
-        <Box sx={{ mb: { xs: 8, md: 12 }, textAlign: 'center' }}>
+        <Box sx={{ mb: { xs: 6, md: 8 }, textAlign: 'center' }}>
+          {/* Decorative accent line */}
+          <Box
+            sx={{
+              width: '80px',
+              height: '4px',
+              backgroundColor: '#D2C1B6',
+              borderRadius: '2px',
+              mx: 'auto',
+              mb: 4,
+            }}
+          />
           <Typography
             variant="h2"
             component="h1"
