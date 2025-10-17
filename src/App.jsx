@@ -51,7 +51,7 @@ function AppContent() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', overscrollBehavior: 'none' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', overscrollBehavior: 'none', backgroundColor: '#ffffff' }}>
           <AppBar
             position="fixed"
             elevation={0}

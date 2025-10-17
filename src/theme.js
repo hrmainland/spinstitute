@@ -20,12 +20,15 @@ const theme = createTheme({
     },
     background: {
       default: '#ffffff',
-      paper: '#fafafa',
+      paper: '#ffffff',
     },
     text: {
       primary: '#1B3C53',
       secondary: '#456882',
     },
+  },
+  cssVariables: {
+    colorSchemeSelector: 'data-color-scheme',
   },
   typography: {
     fontFamily: '"Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif',

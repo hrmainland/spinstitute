@@ -1,17 +1,29 @@
+* {
+  color-scheme: light !important;
+}
+
 :root {
-  color-scheme: light;
+  color-scheme: light !important;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
+html, body, #root {
   margin: 0;
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
   overscroll-behavior: none;
   overflow-x: hidden;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
+  color: #1B3C53 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body, #root {
+    background-color: #ffffff !important;
+    color: #1B3C53 !important;
+  }
 }

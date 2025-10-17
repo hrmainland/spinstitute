@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
-import { Container, Typography, Box, TextField, Button, Paper, Grid } from '@mui/material';
-import EmailIcon from '@mui/icons-material/Email';
-import PhoneIcon from '@mui/icons-material/Phone';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import React, { useState } from "react";
+import {
+  Container,
+  Typography,
+  Box,
+  TextField,
+  Button,
+  Paper,
+  Grid,
+} from "@mui/material";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -23,27 +31,27 @@ export default function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: "", email: "", message: "" });
     setTimeout(() => setSubmitted(false), 5000);
   };
 
   const contactInfo = [
     {
       icon: <EmailIcon sx={{ fontSize: 32 }} />,
-      title: 'Email',
-      detail: 'info@spinstitute.org',
+      title: "Email",
+      detail: "info@spinstitute.org",
     },
     {
       icon: <PhoneIcon sx={{ fontSize: 32 }} />,
-      title: 'Phone',
-      detail: '+1 (555) 123-4567',
+      title: "Phone",
+      detail: "+1 (555) 123-4567",
     },
     {
       icon: <LocationOnIcon sx={{ fontSize: 32 }} />,
-      title: 'Location',
-      detail: 'Sydney, Australia',
+      title: "Location",
+      detail: "Sydney, Australia",
     },
   ];
 
@@ -51,15 +59,15 @@ export default function ContactUs() {
     <Box sx={{ py: { xs: 4, md: 6 } }}>
       <Container maxWidth="lg">
         {/* Page Header */}
-        <Box sx={{ mb: { xs: 6, md: 8 }, textAlign: 'center' }}>
+        <Box sx={{ mb: { xs: 6, md: 8 }, textAlign: "center" }}>
           {/* Decorative accent line */}
           <Box
             sx={{
-              width: '80px',
-              height: '4px',
-              backgroundColor: '#D2C1B6',
-              borderRadius: '2px',
-              mx: 'auto',
+              width: "80px",
+              height: "4px",
+              backgroundColor: "#D2C1B6",
+              borderRadius: "2px",
+              mx: "auto",
               mb: 4,
             }}
           />
@@ -68,8 +76,8 @@ export default function ContactUs() {
             component="h1"
             sx={{
               mb: 3,
-              color: 'primary.main',
-              fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem' },
+              color: "primary.main",
+              fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem" },
             }}
           >
             Contact Us
@@ -77,42 +85,69 @@ export default function ContactUs() {
           <Typography
             variant="body1"
             sx={{
-              color: 'text.secondary',
-              maxWidth: '700px',
-              mx: 'auto',
-              fontSize: { xs: '1.1rem', md: '1.2rem' },
+              color: "text.secondary",
+              maxWidth: "700px",
+              mx: "auto",
+              fontSize: { xs: "1.1rem", md: "1.2rem" },
               lineHeight: 1.8,
             }}
           >
-            We'd love to hear from you. Get in touch with us today and let's start a conversation about how we can help.
+            We'd love to hear from you. Get in touch with us today and let's
+            start a conversation about how we can help.
           </Typography>
         </Box>
 
         {/* Contact Info Cards */}
-        <Grid container spacing={4} sx={{ mb: { xs: 8, md: 12 }, justifyContent: 'center' }}>
+        {/* Contact Info Cards */}
+        <Grid
+          container
+          spacing={4}
+          sx={{
+            mb: { xs: 8, md: 12 },
+            justifyContent: "center",
+            alignItems: "stretch",
+          }}
+        >
           {contactInfo.map((info, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              key={index}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <Paper
                 elevation={0}
                 sx={{
                   p: 4,
-                  textAlign: 'center',
-                  backgroundColor: 'white',
-                  border: '2px solid',
-                  borderColor: 'rgba(210, 193, 182, 0.3)',
+                  textAlign: "center",
+                  backgroundColor: "white",
+                  border: "2px solid",
+                  borderColor: "rgba(210, 193, 182, 0.3)",
                   borderRadius: 3,
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    borderColor: 'accent.main',
-                    boxShadow: '0 8px 16px rgba(27, 60, 83, 0.1)',
+                  transition: "all 0.3s ease",
+                  width: "100%",
+                  maxWidth: 300, // ✅ ensures consistent width across all screens
+                  minWidth: 300,
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  "&:hover": {
+                    borderColor: "accent.main",
+                    boxShadow: "0 8px 16px rgba(27, 60, 83, 0.1)",
                   },
                 }}
               >
-                <Box sx={{ color: 'primary.main', mb: 2 }}>{info.icon}</Box>
+                <Box sx={{ color: "primary.main", mb: 2 }}>{info.icon}</Box>
                 <Typography
                   variant="h5"
                   sx={{
-                    color: 'primary.main',
+                    color: "primary.main",
                     mb: 1,
                     fontWeight: 600,
                   }}
@@ -122,7 +157,8 @@ export default function ContactUs() {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: 'text.secondary',
+                    color: "text.secondary",
+                    wordBreak: "break-word",
                   }}
                 >
                   {info.detail}
@@ -133,15 +169,15 @@ export default function ContactUs() {
         </Grid>
 
         {/* Contact Form */}
-        <Grid container spacing={0} sx={{ maxWidth: '800px', mx: 'auto' }}>
+        <Grid container spacing={0} sx={{ maxWidth: "800px", mx: "auto" }}>
           <Grid item xs={12}>
             <Paper
               elevation={0}
               sx={{
                 p: { xs: 4, md: 6 },
-                backgroundColor: 'white',
-                border: '2px solid',
-                borderColor: 'rgba(210, 193, 182, 0.3)',
+                backgroundColor: "white",
+                border: "2px solid",
+                borderColor: "rgba(210, 193, 182, 0.3)",
                 borderRadius: 3,
               }}
             >
@@ -150,13 +186,14 @@ export default function ContactUs() {
                   sx={{
                     mb: 3,
                     p: 2,
-                    backgroundColor: 'rgba(76, 175, 80, 0.1)',
-                    border: '2px solid rgba(76, 175, 80, 0.5)',
+                    backgroundColor: "rgba(76, 175, 80, 0.1)",
+                    border: "2px solid rgba(76, 175, 80, 0.5)",
                     borderRadius: 2,
                   }}
                 >
-                  <Typography sx={{ color: '#2e7d32', fontWeight: 600 }}>
-                    Thank you! We've received your message and will get back to you soon.
+                  <Typography sx={{ color: "#2e7d32", fontWeight: 600 }}>
+                    Thank you! We've received your message and will get back to
+                    you soon.
                   </Typography>
                 </Box>
               )}
@@ -172,13 +209,13 @@ export default function ContactUs() {
                   margin="normal"
                   variant="outlined"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      backgroundColor: 'rgba(248, 249, 251, 0.5)',
-                      '& fieldset': {
-                        borderColor: 'rgba(27, 60, 83, 0.2)',
+                    "& .MuiOutlinedInput-root": {
+                      backgroundColor: "rgba(248, 249, 251, 0.5)",
+                      "& fieldset": {
+                        borderColor: "rgba(27, 60, 83, 0.2)",
                       },
-                      '&:hover fieldset': {
-                        borderColor: 'primary.main',
+                      "&:hover fieldset": {
+                        borderColor: "primary.main",
                       },
                     },
                   }}
@@ -194,13 +231,13 @@ export default function ContactUs() {
                   margin="normal"
                   variant="outlined"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      backgroundColor: 'rgba(248, 249, 251, 0.5)',
-                      '& fieldset': {
-                        borderColor: 'rgba(27, 60, 83, 0.2)',
+                    "& .MuiOutlinedInput-root": {
+                      backgroundColor: "rgba(248, 249, 251, 0.5)",
+                      "& fieldset": {
+                        borderColor: "rgba(27, 60, 83, 0.2)",
                       },
-                      '&:hover fieldset': {
-                        borderColor: 'primary.main',
+                      "&:hover fieldset": {
+                        borderColor: "primary.main",
                       },
                     },
                   }}
@@ -217,13 +254,13 @@ export default function ContactUs() {
                   multiline
                   rows={6}
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      backgroundColor: 'rgba(248, 249, 251, 0.5)',
-                      '& fieldset': {
-                        borderColor: 'rgba(27, 60, 83, 0.2)',
+                    "& .MuiOutlinedInput-root": {
+                      backgroundColor: "rgba(248, 249, 251, 0.5)",
+                      "& fieldset": {
+                        borderColor: "rgba(27, 60, 83, 0.2)",
                       },
-                      '&:hover fieldset': {
-                        borderColor: 'primary.main',
+                      "&:hover fieldset": {
+                        borderColor: "primary.main",
                       },
                     },
                   }}
@@ -234,17 +271,17 @@ export default function ContactUs() {
                   size="large"
                   sx={{
                     mt: 4,
-                    width: '100%',
-                    backgroundColor: 'primary.main',
-                    color: 'white',
+                    width: "100%",
+                    backgroundColor: "primary.main",
+                    color: "white",
                     py: 1.8,
-                    fontSize: '1rem',
+                    fontSize: "1rem",
                     fontWeight: 600,
-                    '&:hover': {
-                      backgroundColor: 'primary.dark',
-                      boxShadow: '0 4px 12px rgba(27, 60, 83, 0.3)',
+                    "&:hover": {
+                      backgroundColor: "primary.dark",
+                      boxShadow: "0 4px 12px rgba(27, 60, 83, 0.3)",
                     },
-                    transition: 'all 0.3s ease',
+                    transition: "all 0.3s ease",
                   }}
                 >
                   Send Message
