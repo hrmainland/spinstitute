@@ -77,8 +77,7 @@ export default function MissionStatement() {
               fontStyle: 'italic',
             }}
           >
-            We are committed to creating lasting impact in our communities by
-            developing tomorrow's leaders today.
+            
           </Typography>
         </Box>
       </Container>
