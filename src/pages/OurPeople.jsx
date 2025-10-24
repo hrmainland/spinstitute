@@ -6,7 +6,7 @@ export default function OurPeople() {
   const TEXT_ZONE_MIN_HEIGHT = 80; // 👈 keep the text area the same height on every card
 
   const teamMembers = [
-    { name: 'John Mainland', image: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Kevin_Hart_2014_%28cropped_2%29.jpg' },
+    { name: 'Jim Mainland', image: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Kevin_Hart_2014_%28cropped_2%29.jpg' },
     { name: 'Justin McGovern', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
     { name: 'Drew Pavlou', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
     { name: 'Jordan Knight', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
