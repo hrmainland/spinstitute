@@ -43,7 +43,7 @@ export default function Hero() {
               fontWeight: 700,
             }}
           >
-            Shaping Australia's Future
+            A Better Australia
           </Typography>
 
           <Typography
@@ -58,7 +58,7 @@ export default function Hero() {
               fontSize: { xs: '1.1rem', md: '1.3rem' },
             }}
           >
-            Empowering individuals and organizations to reach their full potential through innovative thinking and collaborative partnerships
+            Rejuvenating the Australian Right through policy, strategy and training. 
           </Typography>
 
           <Button
