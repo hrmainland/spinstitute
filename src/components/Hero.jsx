@@ -1,12 +1,23 @@
-import React from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Box, Container, Typography } from '@mui/material';
 import Logo from '../assets/Updated no background logo.png';
+import SurfImg from '../assets/womanatsurfersparadise.jpg';
+import FlagImg from '../assets/flag.avif';
+import SkylineImg from '../assets/DGC_Aerial20_00040_edit.jpg'; // keep your original
 
-// Import Montserrat from Google Fonts in your index.html or main CSS file:
-// <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+const heroImages = [SkylineImg, SurfImg, FlagImg];
 
 export default function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  // Cycle images every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Box
       sx={{
@@ -16,11 +27,10 @@ export default function Hero() {
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
-        background: 'linear-gradient(135deg, #1B3C53 0%, #234C6A 50%, #456882 100%)',
-        fontFamily: "'Montserrat', sans-serif", // 👈 Applied here
+        fontFamily: "'Montserrat', sans-serif",
       }}
     >
-      {/* Background Image with Overlay */}
+      {/* Background Montage */}
       <Box
         sx={{
           position: 'absolute',
@@ -28,11 +38,20 @@ export default function Hero() {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage:
-            'url("https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg")',
+          backgroundImage: `url(${heroImages[current]})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: 0.4,
+          transition: 'background-image 1s ease-in-out',
+          opacity: 0.7,
+        }}
+      />
+
+      {/* Dark overlay */}
+      <Box
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          backgroundColor: 'rgba(0,0,0,0.4)',
         }}
       />
 
@@ -65,7 +84,6 @@ export default function Hero() {
               fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem' },
               textShadow: '0 2px 8px rgba(0,0,0,0.2)',
               fontWeight: 700,
-              fontFamily: "'Montserrat', sans-serif", // 👈 Ensures Typography uses Montserrat
             }}
           >
             The Surfers Paradise Institute
@@ -81,7 +99,6 @@ export default function Hero() {
               mx: 'auto',
               lineHeight: 1.6,
               fontSize: { xs: '1.1rem', md: '1.3rem' },
-              fontFamily: "'Montserrat', sans-serif",
             }}
           >
             Rejuvenating the Australian Right through policy, strategy and training.
