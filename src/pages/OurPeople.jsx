@@ -17,11 +17,12 @@ export default function OurPeople() {
 
   return (
     <Box>
-      {/* Full Banner */}
+      {/* Full-width Banner */}
       <Box
         sx={{
           position: 'relative',
-          width: '100%',
+          width: '100vw',
+          minWidth: '100%',
           height: { xs: '50vh', md: '80vh' },
           overflow: 'hidden',
           backgroundImage: `url(${BannerImage})`,
@@ -30,10 +31,10 @@ export default function OurPeople() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        {/* Dark overlay for readability */}
+        {/* Dark overlay */}
         <Box sx={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.45)' }} />
 
-        {/* Banner content */}
+        {/* Centered text */}
         <Box
           sx={{
             position: 'relative',
@@ -70,7 +71,7 @@ export default function OurPeople() {
             }}
           >
             Our people are embedded in existing political parties, academia, the bureaucracy,
-            commerce and the law. We have networks around the country, and regularly host events in Sydney and Canberra as well as Surfers Paradise.
+            commerce and the law. We have networks around the country, and regularly host events in Sydney and Canberra as well as our spiritual home of Surfers Paradise.
           </Typography>
         </Box>
       </Box>
@@ -93,6 +94,7 @@ export default function OurPeople() {
                   flexDirection: 'column',
                 }}
               >
+                {/* Image */}
                 <Box
                   sx={{
                     position: 'relative',
@@ -119,6 +121,7 @@ export default function OurPeople() {
                   />
                 </Box>
 
+                {/* Name */}
                 <Box
                   sx={{
                     p: { xs: 3, md: 4 },
