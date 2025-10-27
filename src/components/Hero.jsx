@@ -3,6 +3,9 @@ import { Box, Container, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/Updated no background logo.png';
 
+// Import Montserrat from Google Fonts in your index.html or main CSS file:
+// <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
 export default function Hero() {
   return (
     <Box
@@ -14,6 +17,7 @@ export default function Hero() {
         alignItems: 'center',
         overflow: 'hidden',
         background: 'linear-gradient(135deg, #1B3C53 0%, #234C6A 50%, #456882 100%)',
+        fontFamily: "'Montserrat', sans-serif", // 👈 Applied here
       }}
     >
       {/* Background Image with Overlay */}
@@ -61,6 +65,7 @@ export default function Hero() {
               fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem' },
               textShadow: '0 2px 8px rgba(0,0,0,0.2)',
               fontWeight: 700,
+              fontFamily: "'Montserrat', sans-serif", // 👈 Ensures Typography uses Montserrat
             }}
           >
             The Surfers Paradise Institute
@@ -76,6 +81,7 @@ export default function Hero() {
               mx: 'auto',
               lineHeight: 1.6,
               fontSize: { xs: '1.1rem', md: '1.3rem' },
+              fontFamily: "'Montserrat', sans-serif",
             }}
           >
             Rejuvenating the Australian Right through policy, strategy and training.
