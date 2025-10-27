@@ -39,7 +39,7 @@ export default function Hero() {
             <img
               src={Logo}
               alt="Institute Logo"
-              style={{ height: '800px', display: 'block', margin: '0 auto' }}
+              style={{ height: '200px', display: 'block', margin: '0 auto' }}
             />
           </Box>
 
