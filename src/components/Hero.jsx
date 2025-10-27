@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import Logo from '../assets/logo.jpeg'; // import your logo
 
 export default function Hero() {
   return (
@@ -33,6 +34,15 @@ export default function Hero() {
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
         <Box sx={{ textAlign: 'center', py: { xs: 0, md: 2 } }}>
+          {/* Logo */}
+          <Box sx={{ mb: 3 }}>
+            <img
+              src={Logo}
+              alt="Institute Logo"
+              style={{ height: '80px', display: 'block', margin: '0 auto' }}
+            />
+          </Box>
+
           {/* Hero Text */}
           <Typography
             variant="h1"
