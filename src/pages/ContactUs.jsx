@@ -3,7 +3,7 @@ import { Container, Typography, Box, TextField, Button, Paper, Grid } from "@mui
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import BannerImage from "../assets/1000029219.jpg"; // uploaded banner image
+import BannerImage from "../assets/1000028083.jpg"; // uploaded banner image
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
