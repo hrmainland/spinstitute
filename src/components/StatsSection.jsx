@@ -67,6 +67,7 @@ export default function MissionStatement() {
             ))}
           </Box>
 
+          {/* Ancient Greek motto */}
           <Typography
             variant="body1"
             sx={{
@@ -77,7 +78,7 @@ export default function MissionStatement() {
               fontStyle: 'italic',
             }}
           >
-            
+            ὑψηλοὶ τεῖχοι καὶ πλούσιοι κῆποι
           </Typography>
         </Box>
       </Container>
