@@ -7,13 +7,19 @@ import surfLifeSavingClub from "../assets/surf-life-saving-club.jpg";
 import womanAtSurfersParadise from "../assets/womanatsurfersparadise.jpg";
 
 export default function Hero() {
-  const images = [cityFromBeach, beachAerial, surfLifeSavingClub, womanAtSurfersParadise];
+  const images = [
+    "https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg",
+    cityFromBeach,
+    beachAerial,
+    surfLifeSavingClub,
+    womanAtSurfersParadise
+  ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
+    }, 8000); // Change image every 8 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -25,12 +31,27 @@ export default function Hero() {
         width: "100%",
         height: "100vh",
         overflow: "hidden",
-        backgroundImage: `url(${images[currentImageIndex]})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
       }}
     >
+      {/* Background Images with Crossfade */}
+      {images.map((image, index) => (
+        <Box
+          key={index}
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundImage: `url(${image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            opacity: currentImageIndex === index ? 1 : 0,
+            transition: "opacity 1s ease-in-out",
+          }}
+        />
+      ))}
       {/* Dark overlay for readability */}
       <Box
         sx={{
@@ -40,6 +61,7 @@ export default function Hero() {
             "linear-gradient(135deg, rgba(27, 60, 83, 0.4) 0%, rgba(35, 76, 106, 0.4) 50%, rgba(69, 104, 130, 0.4) 100%)",
         }}
       />
+              {/* <Box sx={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.45)' }} /> */}
       
 
       {/* Centered Text */}
@@ -84,7 +106,7 @@ export default function Hero() {
             fontSize: { xs: "2.5rem", sm: "3rem", md: "4rem" },
             fontWeight: 700,
             mb: 3,
-            // textShadow: "0 2px 8px rgba(0,0,0,0.3)",
+            textShadow: "0 2px 8px rgba(0,0,0,0.3)",
           }}
         >
           The Surfers Paradise Institute
