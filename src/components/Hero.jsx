@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/logo.jpeg'; // import your logo
+import Logo from '../assets/SPI Logo plus text without background.png'; // import your logo
 
 export default function Hero() {
   return (
