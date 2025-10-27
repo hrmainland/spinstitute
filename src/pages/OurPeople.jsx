@@ -27,7 +27,7 @@ export default function OurPeople() {
             minHeight: { xs: 350, md: 500 },
             py: { xs: 8, md: 10 },
             backgroundImage:
-              'url("https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg")',
+              'url("https://www.shutterstock.com/image-photo/philippines-aug-2020-can-coors-260nw-1809985573.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
