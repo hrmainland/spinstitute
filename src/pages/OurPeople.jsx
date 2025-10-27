@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
-import BannerImage from '../assets/1000029219.jpg'; // Your uploaded banner
+import BannerImage from '../assets/surf-life-saving-club.jpg'; // Your uploaded banner
 
 export default function OurPeople() {
   const CARD_WIDTH = 280;

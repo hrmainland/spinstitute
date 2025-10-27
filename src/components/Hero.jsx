@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Typography } from "@mui/material";
 import Logo from "../assets/Updated no background logo.png";
+import cityFromBeach from "../assets/city-from-beach.jpg";
+import beachAerial from "../assets/beach-aerial.jpg";
+import surfLifeSavingClub from "../assets/surf-life-saving-club.jpg";
+import womanAtSurfersParadise from "../assets/womanatsurfersparadise.jpg";
 
 export default function Hero() {
+  const images = [cityFromBeach, beachAerial, surfLifeSavingClub, womanAtSurfersParadise];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Box
       sx={{
@@ -10,8 +25,7 @@ export default function Hero() {
         width: "100%",
         height: "100vh",
         overflow: "hidden",
-        backgroundImage:
-          'url("https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg")',
+        backgroundImage: `url(${images[currentImageIndex]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -23,11 +37,10 @@ export default function Hero() {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(135deg, rgba(27, 60, 83, 0.6) 0%, rgba(35, 76, 106, 0.6) 50%, rgba(69, 104, 130, 0.6) 100%)",
+            "linear-gradient(135deg, rgba(27, 60, 83, 0.4) 0%, rgba(35, 76, 106, 0.4) 50%, rgba(69, 104, 130, 0.4) 100%)",
         }}
       />
-
-
+      
 
       {/* Centered Text */}
       <Box

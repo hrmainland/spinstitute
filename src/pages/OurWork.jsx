@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Paper, Link as MuiLink } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import BannerImage from '../assets/1000028082.jpg'; // your uploaded banner image
+import BannerImage from '../assets/city-from-beach.jpg'; // your uploaded banner image
 
 export default function OurWork() {
   const reports = [
