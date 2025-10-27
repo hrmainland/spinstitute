@@ -178,7 +178,7 @@ function AppContent() {
             </Toolbar>
           </AppBar>
 
-          <Toolbar sx={{ py: 0.25, display: 'flex', alignItems: 'center', minHeight: 56 }} />
+          <Toolbar sx={{ py: 0.25, display: 'flex', alignItems: 'center', minHeight: 70 }} />
 
           <Box sx={{ flex: 1 }}>
             <Routes>

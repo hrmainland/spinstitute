@@ -39,7 +39,7 @@ export default function ContactUs() {
         sx={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: 'calc(100vh - 56px)',
           overflow: "hidden",
           backgroundImage: `url(${BannerImage})`,
           backgroundSize: "cover",

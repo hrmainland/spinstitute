@@ -23,7 +23,7 @@ export default function OurPeople() {
           position: 'relative',
           width: '100vw',
           minWidth: '100%',
-          height: { xs: '50vh', md: '80vh' },
+          height: 'calc(100vh - 56px)',
           overflow: 'hidden',
           backgroundImage: `url(${BannerImage})`,
           backgroundSize: 'cover',
