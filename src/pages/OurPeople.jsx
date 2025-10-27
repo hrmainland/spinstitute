@@ -70,7 +70,7 @@ export default function OurPeople() {
             }}
           >
             Our people are embedded in existing political parties, academia, the bureaucracy,
-            commerce and the law. We have networks around the country, and regularly host events in Sydney and Canberra as well as our spiritual home of Surfers Paradise.
+            commerce and the law. We have networks around the country, and regularly host events in Sydney and Canberra as well as Surfers Paradise.
           </Typography>
         </Box>
       </Box>
