@@ -1,16 +1,9 @@
 import React, { useState } from "react";
-import {
-  Container,
-  Typography,
-  Box,
-  TextField,
-  Button,
-  Paper,
-  Grid,
-} from "@mui/material";
+import { Container, Typography, Box, TextField, Button, Paper, Grid } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import BannerImage from "../assets/1000029219.jpg"; // uploaded banner image
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -18,15 +11,11 @@ export default function ContactUs() {
     email: "",
     message: "",
   });
-
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
@@ -38,99 +27,88 @@ export default function ContactUs() {
   };
 
   const contactInfo = [
-    {
-      icon: <EmailIcon sx={{ fontSize: 32 }} />,
-      title: "Email",
-      detail: "info@spi.org.au",
-    },
-    {
-      icon: <PhoneIcon sx={{ fontSize: 32 }} />,
-      title: "Phone",
-      detail: "+61 491 964 588",
-    },
-    {
-      icon: <LocationOnIcon sx={{ fontSize: 32 }} />,
-      title: "Location",
-      detail: "Gold Coast, Australia",
-    },
+    { icon: <EmailIcon sx={{ fontSize: 32 }} />, title: "Email", detail: "info@spi.org.au" },
+    { icon: <PhoneIcon sx={{ fontSize: 32 }} />, title: "Phone", detail: "+61 491 964 588" },
+    { icon: <LocationOnIcon sx={{ fontSize: 32 }} />, title: "Location", detail: "Gold Coast, Australia" },
   ];
 
   return (
-    <Box sx={{ py: { xs: 4, md: 6 } }}>
-      <Container maxWidth="lg">
-        {/* Page Header */}
-        <Box sx={{ mb: { xs: 6, md: 8 }, textAlign: "center" }}>
-          {/* Decorative accent line */} 
-          <Box
-            sx={{
-              width: "80px",
-              height: "4px",
-              backgroundColor: "#D2C1B6",
-              borderRadius: "2px",
-              mx: "auto",
-              mb: 4,
-            }}
-          />
+    <Box>
+      {/* Hero Banner */}
+      <Box
+        sx={{
+          position: "relative",
+          width: "100%",
+          height: "100vh",
+          overflow: "hidden",
+          backgroundImage: `url(${BannerImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Dark overlay */}
+        <Box sx={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.4)" }} />
+
+        {/* Centered text */}
+        <Box
+          sx={{
+            position: "relative",
+            zIndex: 1,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            px: 2,
+          }}
+        >
           <Typography
-            variant="h2"
-            component="h1"
+            variant="h1"
             sx={{
+              color: "white",
+              fontSize: { xs: "2.5rem", sm: "3rem", md: "4rem" },
+              fontWeight: 700,
               mb: 3,
-              color: "primary.main",
-              fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem" },
+              textShadow: "0 2px 8px rgba(0,0,0,0.3)",
             }}
           >
             Contact Us
           </Typography>
+
           <Typography
             variant="body1"
             sx={{
-              color: "text.secondary",
-              maxWidth: "700px",
-              mx: "auto",
-              fontSize: { xs: "1.1rem", md: "1.2rem" },
-              lineHeight: 1.8,
+              color: "rgba(255,255,255,0.95)",
+              fontWeight: 300,
+              maxWidth: "900px",
+              lineHeight: 1.6,
+              fontSize: { xs: "1.2rem", md: "1.4rem" },
             }}
           >
-            The Surfers Paradise Institute aims to bring people together from across the Right. If you are interested in being involved in any way, please get in touch. 
+            The Surfers Paradise Institute aims to bring people together from across the Right. If you are interested in being involved in any way, please get in touch.
           </Typography>
         </Box>
+      </Box>
 
-        {/* Contact Info Cards */}
-        {/* Contact Info Cards */}
-        <Grid
-          container
-          spacing={4}
-          sx={{
-            mb: { xs: 8, md: 12 },
-            justifyContent: "center",
-            alignItems: "stretch",
-          }}
-        >
+      {/* Contact Info Cards */}
+      <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
+        <Grid container spacing={4} sx={{ mb: { xs: 8, md: 12 }, justifyContent: "center", alignItems: "stretch" }}>
           {contactInfo.map((info, index) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              key={index}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
+            <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex", justifyContent: "center" }}>
               <Paper
                 elevation={0}
                 sx={{
                   p: 4,
                   textAlign: "center",
                   backgroundColor: "white",
-                  border: "2px solid",
-                  borderColor: "rgba(210, 193, 182, 0.3)",
+                  border: "2px solid rgba(210, 193, 182, 0.3)",
                   borderRadius: 3,
                   transition: "all 0.3s ease",
                   width: "100%",
-                  maxWidth: 300, // ✅ ensures consistent width across all screens
+                  maxWidth: 300,
                   minWidth: 300,
                   height: "100%",
                   display: "flex",
@@ -143,23 +121,10 @@ export default function ContactUs() {
                 }}
               >
                 <Box sx={{ color: "primary.main", mb: 2 }}>{info.icon}</Box>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    color: "primary.main",
-                    mb: 1,
-                    fontWeight: 600,
-                  }}
-                >
+                <Typography variant="h5" sx={{ color: "primary.main", mb: 1, fontWeight: 600 }}>
                   {info.title}
                 </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "text.secondary",
-                    wordBreak: "break-word",
-                  }}
-                >
+                <Typography variant="body1" sx={{ color: "text.secondary", wordBreak: "break-word" }}>
                   {info.detail}
                 </Typography>
               </Paper>
@@ -167,129 +132,4 @@ export default function ContactUs() {
           ))}
         </Grid>
 
-        {/* Contact Form */}
-        <Grid container spacing={0} sx={{ maxWidth: "800px", mx: "auto" }}>
-          <Grid item xs={12}>
-            <Paper
-              elevation={0}
-              sx={{
-                p: { xs: 4, md: 6 },
-                backgroundColor: "white",
-                border: "2px solid",
-                borderColor: "rgba(210, 193, 182, 0.3)",
-                borderRadius: 3,
-              }}
-            >
-              {submitted && (
-                <Box
-                  sx={{
-                    mb: 3,
-                    p: 2,
-                    backgroundColor: "rgba(76, 175, 80, 0.1)",
-                    border: "2px solid rgba(76, 175, 80, 0.5)",
-                    borderRadius: 2,
-                  }}
-                >
-                  <Typography sx={{ color: "#2e7d32", fontWeight: 600 }}>
-                    Thank you! We've received your message and will get back to
-                    you soon.
-                  </Typography>
-                </Box>
-              )}
-
-              <form onSubmit={handleSubmit}>
-                <TextField
-                  fullWidth
-                  label="Name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  margin="normal"
-                  variant="outlined"
-                  sx={{
-                    "& .MuiOutlinedInput-root": {
-                      backgroundColor: "rgba(248, 249, 251, 0.5)",
-                      "& fieldset": {
-                        borderColor: "rgba(27, 60, 83, 0.2)",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "primary.main",
-                      },
-                    },
-                  }}
-                />
-                <TextField
-                  fullWidth
-                  label="Email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  margin="normal"
-                  variant="outlined"
-                  sx={{
-                    "& .MuiOutlinedInput-root": {
-                      backgroundColor: "rgba(248, 249, 251, 0.5)",
-                      "& fieldset": {
-                        borderColor: "rgba(27, 60, 83, 0.2)",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "primary.main",
-                      },
-                    },
-                  }}
-                />
-                <TextField
-                  fullWidth
-                  label="Message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  margin="normal"
-                  variant="outlined"
-                  multiline
-                  rows={6}
-                  sx={{
-                    "& .MuiOutlinedInput-root": {
-                      backgroundColor: "rgba(248, 249, 251, 0.5)",
-                      "& fieldset": {
-                        borderColor: "rgba(27, 60, 83, 0.2)",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "primary.main",
-                      },
-                    },
-                  }}
-                />
-                <Button
-                  type="submit"
-                  variant="contained"
-                  size="large"
-                  sx={{
-                    mt: 4,
-                    width: "100%",
-                    backgroundColor: "primary.main",
-                    color: "white",
-                    py: 1.8,
-                    fontSize: "1rem",
-                    fontWeight: 600,
-                    "&:hover": {
-                      backgroundColor: "primary.dark",
-                      boxShadow: "0 4px 12px rgba(27, 60, 83, 0.3)",
-                    },
-                    transition: "all 0.3s ease",
-                  }}
-                >
-                  Send Message
-                </Button>
-              </form>
-            </Paper>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
-  );
-}
+        {/* Contact*
