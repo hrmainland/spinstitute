@@ -23,7 +23,8 @@ export default function Hero() {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: 'url(https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg)',
+          backgroundImage:
+            'url("https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.4,
@@ -58,7 +59,7 @@ export default function Hero() {
               fontSize: { xs: '1.1rem', md: '1.3rem' },
             }}
           >
-            Rejuvenating the Australian Right through policy, strategy and training. 
+            Rejuvenating the Australian Right through policy, strategy and training.
           </Typography>
 
           <Button
