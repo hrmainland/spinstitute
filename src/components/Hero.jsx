@@ -23,7 +23,7 @@ export default function Hero() {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: 'url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop)',
+          backgroundImage: 'url(https://www.travelonline.com/gold-coast/surfers-paradise/beach-88086-banner.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.4,
