@@ -78,9 +78,7 @@ export default function OurPeople() {
               }}
             >
               Our people are embedded in existing political parties, academia, the bureaucracy,
-              commerce and the law. This allows us to consider the issues facing Australia from
-              a range of different perspectives, and to draw upon a range of different skillsets
-              in achieving our goals.
+              commerce and the law. We have networks around the country, and regularly host events in Sydney and Canberra as well as our spiritual home of Surfers Paradise.
             </Typography>
           </Box>
         </Box>
