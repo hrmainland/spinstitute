@@ -42,15 +42,13 @@ export default function Hero() {
               filter: `
                 drop-shadow(0 0 4px white)
                 drop-shadow(0 0 4px white)
-                drop-shadow(0 0 4px white)
-                drop-shadow(0 0 4px white)
               `,
             }}
           >
             <img
               src={Logo}
               alt="Institute Logo"
-              style={{ height: '80px', display: 'block', margin: '0 auto' }}
+              style={{ height: '200px', display: 'block', margin: '0 auto' }}
             />
           </Box>
 
