@@ -1,15 +1,15 @@
 import React from 'react';
-import { Container, Typography, Box, Grid, Paper } from '@mui/material';
+import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 
 export default function OurPeople() {
-  const CARD_WIDTH = 280;        // fixed card width
-  const TEXT_ZONE_MIN_HEIGHT = 80; // keep text area same height
+  const CARD_WIDTH = 280;
+  const TEXT_ZONE_MIN_HEIGHT = 80;
 
   const teamMembers = [
     { name: 'John Doe', image: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Kevin_Hart_2014_%28cropped_2%29.jpg' },
     { name: 'Jane Smith', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Shaquille_O%27Neal_Free_Throw.jpg/250px-Shaquille_O%27Neal_Free_Throw.jpg' },
     { name: 'Peng Shuai', image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Peng_Shuai_Shirts_Australian_Open_%28cropped%29.jpg' },
-    { name: 'Alex Johnson', image: 'https://www.shutterstock.com/image-photo/closeup-portrait-caucasian-handsome-businessman-260nw-2142820447.jpg' },
+    { name: 'Alex Johnson', image: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Portrait_Placeholder.png' },
     { name: 'Taylor Lee', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
     { name: 'Chris Brown', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
   ];
@@ -17,8 +17,7 @@ export default function OurPeople() {
   return (
     <Box sx={{ py: { xs: 4, md: 6 } }}>
       <Container maxWidth="lg">
-
-        {/* Page Header with background */}
+        {/* Page Header */}
         <Box
           sx={{
             position: 'relative',
@@ -36,7 +35,7 @@ export default function OurPeople() {
             overflow: 'hidden',
           }}
         >
-          {/* dark overlay */}
+          {/* Dark overlay for readability */}
           <Box
             sx={{
               position: 'absolute',
@@ -84,11 +83,7 @@ export default function OurPeople() {
         </Box>
 
         {/* Team Grid */}
-        <Grid
-          container
-          spacing={{ xs: 4, sm: 5, md: 6 }}
-          sx={{ justifyContent: 'center' }}
-        >
+        <Grid container spacing={{ xs: 4, sm: 5, md: 6 }} justifyContent="center">
           {teamMembers.map((member, index) => (
             <Grid
               item
@@ -112,7 +107,7 @@ export default function OurPeople() {
                   flexDirection: 'column',
                 }}
               >
-                {/* IMAGE */}
+                {/* Image */}
                 <Box
                   sx={{
                     position: 'relative',
@@ -139,7 +134,7 @@ export default function OurPeople() {
                   />
                 </Box>
 
-                {/* CONTENT */}
+                {/* Content */}
                 <Box
                   sx={{
                     p: { xs: 3, md: 4 },
@@ -170,7 +165,6 @@ export default function OurPeople() {
             </Grid>
           ))}
         </Grid>
-
       </Container>
     </Box>
   );
