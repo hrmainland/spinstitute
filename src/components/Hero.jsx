@@ -23,7 +23,7 @@ export default function Hero() {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: 'url(https://www.travelonline.com/gold-coast/surfers-paradise/beach-88086-banner.jpg)',
+          backgroundImage: 'url(https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.4,
