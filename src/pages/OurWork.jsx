@@ -34,7 +34,7 @@ export default function OurWork() {
         sx={{
           position: 'relative',
           width: '100%',
-          height: 'calc(100vh - 56px)',
+          height: '100vh',
           overflow: 'hidden',
           backgroundImage: `url(${BannerImage})`,
           backgroundSize: 'cover',

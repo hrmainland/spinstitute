@@ -65,13 +65,13 @@ function AppContent() {
               willChange: 'opacity',
             }}
           >
-            <Toolbar sx={{ py: 0.25, display: 'flex', alignItems: 'center', minHeight: 56 }}>
+            <Toolbar sx={{ py: 0.25, display: 'flex', alignItems: 'center', minHeight: 70 }}>
               <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', gap: 2 }}>
                 <img
                   src={title}
                   alt="Surfers Paradise Institute"
                   style={{
-                    height: '50px',
+                    height: '70px',
                     width: 'auto',
                     objectFit: 'contain',
                   }}
@@ -149,9 +149,9 @@ function AppContent() {
                   display: { xs: 'none', md: 'flex' },
                   ml: 'auto',
                   '& .MuiTab-root': {
-                    fontSize: '0.85rem',
+                    fontSize: '1rem',
                     fontWeight: 500,
-                    minHeight: 56,
+                    minHeight: 70,
                     minWidth: 90,
                     textTransform: 'none',
                     color: '#456882',
@@ -177,8 +177,6 @@ function AppContent() {
               </Tabs>
             </Toolbar>
           </AppBar>
-
-          <Toolbar sx={{ py: 0.25, display: 'flex', alignItems: 'center', minHeight: 70 }} />
 
           <Box sx={{ flex: 1 }}>
             <Routes>

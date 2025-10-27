@@ -1,5 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 
+// Font families
+const headingFont = '"Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif';
+const bodyFont = '"Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif';
+
 const theme = createTheme({
   palette: {
     mode: 'light',
@@ -31,37 +35,37 @@ const theme = createTheme({
     colorSchemeSelector: 'data-color-scheme',
   },
   typography: {
-    fontFamily: '"Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif',
+    fontFamily: bodyFont,
     h1: {
-      fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif',
+      fontFamily: headingFont,
       fontSize: '3.5rem',
       fontWeight: 700,
       lineHeight: 1.2,
       letterSpacing: '-0.025em',
     },
     h2: {
-      fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif',
+      fontFamily: headingFont,
       fontSize: '2.75rem',
       fontWeight: 700,
       lineHeight: 1.3,
       letterSpacing: '-0.02em',
     },
     h3: {
-      fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif',
+      fontFamily: headingFont,
       fontSize: '2rem',
       fontWeight: 600,
       lineHeight: 1.4,
       letterSpacing: '-0.015em',
     },
     h4: {
-      fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif',
+      fontFamily: headingFont,
       fontSize: '1.5rem',
       fontWeight: 600,
       lineHeight: 1.4,
       letterSpacing: '-0.01em',
     },
     h5: {
-      fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif',
+      fontFamily: headingFont,
       fontSize: '1.25rem',
       fontWeight: 600,
       lineHeight: 1.5,
