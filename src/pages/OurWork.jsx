@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Typography, Box, Link as MuiLink, Paper } from '@mui/material';
+import { Container, Typography, Box, Paper, Link as MuiLink } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import BannerImage from '../assets/womanatsurfersparadise.jpg'; // your uploaded banner image
 
 export default function OurWork() {
   const reports = [
@@ -27,75 +28,74 @@ export default function OurWork() {
   ];
 
   return (
-    <Box sx={{ py: { xs: 4, md: 6 } }}>
-      <Container maxWidth="lg">
+    <Box>
+      {/* Hero Banner */}
+      <Box
+        sx={{
+          position: 'relative',
+          width: '100%',
+          height: '100vh', // full viewport height
+          overflow: 'hidden',
+          backgroundImage: `url(${BannerImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Dark overlay for readability */}
+        <Box
+          sx={{
+            position: 'absolute',
+            inset: 0,
+            backgroundColor: 'rgba(0,0,0,0.4)',
+          }}
+        />
 
-        {/* Page Header with background */}
+        {/* Centered Text */}
         <Box
           sx={{
             position: 'relative',
-            mb: { xs: 6, md: 8 },
+            zIndex: 1,
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center', // vertical centering
             textAlign: 'center',
-            color: 'white',
-            minHeight: { xs: 350, md: 500 },
-            py: { xs: 8, md: 10 },
-            backgroundImage:
-              'url("https://ballrealty.com.au/sites/ballrealty/media/blog/21805317085_b9f34e59a9_o.jpg")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            borderRadius: 2,
-            overflow: 'hidden',
+            px: 2, // horizontal padding for mobile
           }}
         >
-          {/* Dark overlay for text readability */}
-          <Box
+          <Typography
+            variant="h1"
             sx={{
-              position: 'absolute',
-              inset: 0,
-              backgroundColor: 'rgba(0,0,0,0.45)',
-              zIndex: 1,
+              color: 'white',
+              fontSize: { xs: '2.5rem', sm: '3rem', md: '4rem' },
+              fontWeight: 700,
+              mb: 3,
+              textShadow: '0 2px 8px rgba(0,0,0,0.3)',
             }}
-          />
+          >
+            Our Work
+          </Typography>
 
-          {/* Header content */}
-          <Box sx={{ position: 'relative', zIndex: 2 }}>
-            <Box
-              sx={{
-                width: '80px',
-                height: '4px',
-                backgroundColor: '#D2C1B6',
-                borderRadius: '2px',
-                mx: 'auto',
-                mb: 4,
-              }}
-            />
-            <Typography
-              variant="h2"
-              component="h1"
-              sx={{
-                mb: 3,
-                fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem' },
-              }}
-            >
-              Our Work
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                color: 'rgba(255,255,255,0.95)',
-                maxWidth: '700px',
-                mx: 'auto',
-                fontSize: { xs: '1.1rem', md: '1.2rem' },
-                lineHeight: 1.8,
-              }}
-            >
-              We are proud to share our latest reports and research. For more information please get in contact with us directly.
-            </Typography>
-          </Box>
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'rgba(255,255,255,0.95)',
+              fontWeight: 300,
+              maxWidth: '900px',
+              lineHeight: 1.6,
+              fontSize: { xs: '1.2rem', md: '1.4rem' },
+            }}
+          >
+            We are proud to share our latest reports and research. For more information, please get in contact with us directly.
+          </Typography>
         </Box>
+      </Box>
 
-        {/* Reports List */}
+      {/* Reports Section */}
+      <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 4, md: 5 } }}>
           {reports.map((report, index) => (
             <Paper
