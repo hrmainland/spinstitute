@@ -5,23 +5,23 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 export default function OurWork() {
   const reports = [
     {
-      title: 'Annual Impact Report 2024',
-      description: 'Comprehensive overview of our achievements, initiatives, and impact across all programs.',
+      title: 'How We Win',
+      description: 'Comprehensive overview of the strategic steps required for a National Conservative party to take power.',
       url: 'https://www.sample-pdf.com/2024-impact-report.pdf',
     },
     {
-      title: 'Strategic Initiative Overview',
-      description: 'Detailed analysis of our strategic goals and the programs we\'ve implemented to achieve them.',
+      title: 'Our Promise on Immigration',
+      description: 'A deep-dive on renewed immigration policy for a cohesive, prosperous and self-confident Australia.',
       url: 'https://www.example.com/strategic-overview',
     },
     {
-      title: 'Research & Insights',
-      description: 'In-depth research findings on leadership development trends and best practices.',
+      title: 'Our Promise on Energy',
+      description: 'Polic recommendations to unleash Australian energy production for households and businesses.',
       url: 'https://www.example.com/research',
     },
     {
-      title: 'Case Studies',
-      description: 'Real-world examples of transformation and success from our partner organizations.',
+      title: 'Our Promise on Housing',
+      description: 'How do we restore the dream of home ownership for a new generation of Australians?.',
       url: 'https://www.example.com/case-studies',
     },
   ];
@@ -63,7 +63,7 @@ export default function OurWork() {
               lineHeight: 1.8,
             }}
           >
-            We are proud to share our latest reports and research that showcase our commitment to innovation and measurable impact across all our programs.
+            We are proud to share our latest reports and research. For more information please get in contact with us directly.
           </Typography>
         </Box>
 
