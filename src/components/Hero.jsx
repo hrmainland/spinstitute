@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/Updated no background logo.png'; // import your logo
+import Logo from '../assets/Updated no background logo.png';
 
 export default function Hero() {
   return (
@@ -34,12 +34,23 @@ export default function Hero() {
 
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
         <Box sx={{ textAlign: 'center', py: { xs: 0, md: 2 } }}>
-          {/* Logo */}
-          <Box sx={{ mb: 3 }}>
+          {/* Logo with Thick White Outline */}
+          <Box
+            sx={{
+              mb: 3,
+              display: 'inline-block',
+              filter: `
+                drop-shadow(0 0 4px white)
+                drop-shadow(0 0 4px white)
+                drop-shadow(0 0 4px white)
+                drop-shadow(0 0 4px white)
+              `,
+            }}
+          >
             <img
               src={Logo}
               alt="Institute Logo"
-              style={{ height: '200px', display: 'block', margin: '0 auto' }}
+              style={{ height: '800px', display: 'block', margin: '0 auto' }}
             />
           </Box>
 
@@ -71,31 +82,6 @@ export default function Hero() {
           >
             Rejuvenating the Australian Right through policy, strategy and training.
           </Typography>
-
-          <Button
-            component={Link}
-            to="/our-work"
-            variant="contained"
-            size="large"
-            sx={{
-              backgroundColor: '#D2C1B6',
-              color: '#1B3C53',
-              px: 5,
-              py: 1.8,
-              fontSize: '1.1rem',
-              fontWeight: 600,
-              boxShadow: '0 4px 14px rgba(210, 193, 182, 0.4)',
-              '&:hover': {
-                backgroundColor: '#b8a597',
-                boxShadow: '0 6px 20px rgba(210, 193, 182, 0.6)',
-                transform: 'translateY(-2px)',
-              },
-              transition: 'all 0.3s ease',
-              textDecoration: 'none',
-            }}
-          >
-            Discover Our Work
-          </Button>
         </Box>
       </Container>
     </Box>
