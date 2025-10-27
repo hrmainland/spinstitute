@@ -56,7 +56,7 @@ export default function OurPeople() {
               fontSize: { xs: '2.5rem', md: '4rem' },
               fontWeight: 700,
               mb: 2,
-              textShadow: '0 2px 8px rgba(0,0,0,0.5)',
+              // textShadow: '0 2px 8px rgba(0,0,0,0.5)',
             }}
           >
             Our People

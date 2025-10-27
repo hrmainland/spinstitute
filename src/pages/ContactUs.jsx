@@ -72,7 +72,7 @@ export default function ContactUs() {
               fontSize: { xs: "2.5rem", sm: "3rem", md: "4rem" },
               fontWeight: 700,
               mb: 3,
-              textShadow: "0 2px 8px rgba(0,0,0,0.3)",
+              // textShadow: "0 2px 8px rgba(0,0,0,0.3)",
             }}
           >
             Contact Us
