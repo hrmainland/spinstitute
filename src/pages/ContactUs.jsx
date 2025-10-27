@@ -41,17 +41,17 @@ export default function ContactUs() {
     {
       icon: <EmailIcon sx={{ fontSize: 32 }} />,
       title: "Email",
-      detail: "info@spinstitute.org",
+      detail: "info@spi.org.au",
     },
     {
       icon: <PhoneIcon sx={{ fontSize: 32 }} />,
       title: "Phone",
-      detail: "+1 (555) 123-4567",
+      detail: "+61 491 964 588",
     },
     {
       icon: <LocationOnIcon sx={{ fontSize: 32 }} />,
       title: "Location",
-      detail: "Sydney, Australia",
+      detail: "Gold Coast, Australia",
     },
   ];
 
@@ -92,8 +92,7 @@ export default function ContactUs() {
               lineHeight: 1.8,
             }}
           >
-            We'd love to hear from you. Get in touch with us today and let's
-            start a conversation about how we can help.
+            The Surfers Paradise Institute aims to bring people together from across the Right. If you are interested in being involved in any way, please get in touch. 
           </Typography>
         </Box>
 
