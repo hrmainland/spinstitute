@@ -6,12 +6,12 @@ export default function OurPeople() {
   const TEXT_ZONE_MIN_HEIGHT = 80; // 👈 keep the text area the same height on every card
 
   const teamMembers = [
-    { name: 'John Mainland', image: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Kevin_Hart_2014_%28cropped_2%29.jpg' },
-    { name: 'Justin McGovern', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Shaquille_O%27Neal_Free_Throw.jpg/250px-Shaquille_O%27Neal_Free_Throw.jpg' },
-    { name: 'Drew Pavlou', image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Peng_Shuai_Shirts_Australian_Open_%28cropped%29.jpg' },
-    { name: 'Will Bennett', image: 'https://www.shutterstock.com/image-photo/closeup-portrait-caucasian-handsome-businessman-260nw-2142820447.jpg' },
-    { name: 'Brian Jackson', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
-    { name: 'Jordan Abouzeid', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
+    { name: 'name', image: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Kevin_Hart_2014_%28cropped_2%29.jpg' },
+    { name: 'name', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Shaquille_O%27Neal_Free_Throw.jpg/250px-Shaquille_O%27Neal_Free_Throw.jpg' },
+    { name: 'name', image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Peng_Shuai_Shirts_Australian_Open_%28cropped%29.jpg' },
+    { name: 'name', image: 'https://www.shutterstock.com/image-photo/closeup-portrait-caucasian-handsome-businessman-260nw-2142820447.jpg' },
+    { name: 'name', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
+    { name: 'name', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
   ];
 
   return (
@@ -51,7 +51,7 @@ export default function OurPeople() {
               lineHeight: 1.8,
             }}
           >
-            Meet the talented and dedicated individuals who drive our mission forward every day.
+            Our people are embedded in existing political parties, academia, the bureaucracy, commerce and the law. This allows us to consider the issues facing Australia from a range of different perspectives, and to draw upon a range of different skillsets in achieving our goals.
           </Typography>
         </Box>
 
