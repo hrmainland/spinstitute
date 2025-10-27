@@ -43,7 +43,7 @@ export default function Hero() {
               fontWeight: 700,
             }}
           >
-            A Better Australia
+            The Surfers Paradise Institute
           </Typography>
 
           <Typography
