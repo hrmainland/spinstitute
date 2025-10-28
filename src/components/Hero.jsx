@@ -3,7 +3,6 @@ import { Box, Typography } from "@mui/material";
 import Logo from "../assets/Updated no background logo.png";
 import cityFromBeach from "../assets/city-from-beach.jpg";
 import beachAerial from "../assets/beach-aerial.jpg";
-import surfLifeSavingClub from "../assets/surf-life-saving-club.jpg";
 import womanAtSurfersParadise from "../assets/womanatsurfersparadise.jpg";
 
 export default function Hero() {
