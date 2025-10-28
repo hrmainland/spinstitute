@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
-import BannerVideo from '../assets/1000029335-1.mp4'; // 🎥 rename your file to remove spaces/parentheses
 
 export default function OurPeople() {
   const CARD_WIDTH = 280;
@@ -27,7 +26,7 @@ export default function OurPeople() {
           overflow: 'hidden',
         }}
       >
-        {/* 🎥 Background Video */}
+        {/* 🎥 Background Video from public folder */}
         <video
           autoPlay
           loop
@@ -41,23 +40,11 @@ export default function OurPeople() {
             height: '100%',
             objectFit: 'cover',
             zIndex: -1,
-            opacity: 0,
-            animation: 'fadeIn 2s forwards',
           }}
         >
-          <source src={BannerVideo} type="video/mp4" />
+          <source src="/videos/1000029335 (1) (1).mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-        {/* Simple fade-in keyframes */}
-        <style>
-          {`
-            @keyframes fadeIn {
-              from { opacity: 0; }
-              to { opacity: 1; }
-            }
-          `}
-        </style>
 
         {/* Dark overlay */}
         <Box sx={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.45)' }} />
@@ -104,7 +91,7 @@ export default function OurPeople() {
         </Box>
       </Box>
 
-      {/* === Team Grid Section (unchanged) === */}
+      {/* === Team Grid Section === */}
       <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
         <Grid container spacing={{ xs: 4, sm: 5, md: 6 }} justifyContent="center">
           {teamMembers.map((member, index) => (
