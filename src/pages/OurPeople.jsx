@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
-import BannerImage from '../assets/surf-life-saving-club.jpg'; // Your uploaded banner
+import BannerVideo from '../assets/1000029335-1.mp4'; // 🎥 rename your file to remove spaces/parentheses
 
 export default function OurPeople() {
   const CARD_WIDTH = 280;
@@ -17,7 +17,7 @@ export default function OurPeople() {
 
   return (
     <Box>
-      {/* Full-width Banner */}
+      {/* === Full-width Banner with Video Background === */}
       <Box
         sx={{
           position: 'relative',
@@ -25,12 +25,40 @@ export default function OurPeople() {
           minWidth: '100%',
           height: '100vh',
           overflow: 'hidden',
-          backgroundImage: `url(${BannerImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
         }}
       >
+        {/* 🎥 Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: -1,
+            opacity: 0,
+            animation: 'fadeIn 2s forwards',
+          }}
+        >
+          <source src={BannerVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Simple fade-in keyframes */}
+        <style>
+          {`
+            @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+            }
+          `}
+        </style>
+
         {/* Dark overlay */}
         <Box sx={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.45)' }} />
 
@@ -56,7 +84,6 @@ export default function OurPeople() {
               fontSize: { xs: '2.5rem', md: '4rem' },
               fontWeight: 700,
               mb: 2,
-              // textShadow: '0 2px 8px rgba(0,0,0,0.5)',
             }}
           >
             Our People
@@ -71,12 +98,13 @@ export default function OurPeople() {
             }}
           >
             Our people are embedded in existing political parties, academia, the bureaucracy,
-            commerce and the law. We have networks around the country, and regularly host events in Sydney and Canberra as well as our spiritual home of Surfers Paradise.
+            commerce and the law. We have networks around the country, and regularly host events in
+            Sydney and Canberra as well as our spiritual home of Surfers Paradise.
           </Typography>
         </Box>
       </Box>
 
-      {/* Team Grid */}
+      {/* === Team Grid Section (unchanged) === */}
       <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
         <Grid container spacing={{ xs: 4, sm: 5, md: 6 }} justifyContent="center">
           {teamMembers.map((member, index) => (
@@ -94,7 +122,6 @@ export default function OurPeople() {
                   flexDirection: 'column',
                 }}
               >
-                {/* Image */}
                 <Box
                   sx={{
                     position: 'relative',
@@ -121,7 +148,6 @@ export default function OurPeople() {
                   />
                 </Box>
 
-                {/* Name */}
                 <Box
                   sx={{
                     p: { xs: 3, md: 4 },
