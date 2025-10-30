@@ -1,45 +1,35 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 
-// Local banner image
+// Local images
 import bannerImage from '../assets/surf-life-saving-club.jpg';
+import johnHeadshot from '../assets/AI_headshot.jpg';
+// Add other team members' local headshots here, e.g.:
+// import janeDoe from '../assets/Jane_headshot.jpg';
+// import alexNguyen from '../assets/Alex_headshot.jpg';
+
+const teamMembers = [
+  {
+    name: 'John Mainland',
+    role: 'President',
+    image: johnHeadshot,
+  },
+  // Example of adding more local team members:
+  // {
+  //   name: 'Jane Doe',
+  //   role: 'Vice President',
+  //   image: janeDoe,
+  // },
+  // {
+  //   name: 'Alex Nguyen',
+  //   role: 'Head of Strategy',
+  //   image: alexNguyen,
+  // },
+];
 
 export default function OurPeople() {
   const CARD_WIDTH = 280;
   const TEXT_ZONE_MIN_HEIGHT = 100;
-
-  const teamMembers = [
-    {
-      name: 'John Mainland',
-      role: 'President',
-      image: 'https://images.squarespace-cdn.com/content/v1/67e63b9be0acbc7df97a68b2/ce2b1139-e329-45d2-a87a-8a5d807ef4ab/Mainland+John+-+Garran+Headshot.jpg?format=500w',
-    },
-    {
-      name: 'Chris Brown',
-      role: 'Vice President',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
-    },
-    {
-      name: 'Taylor Lee',
-      role: 'Head of Policy',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop',
-    },
-    {
-      name: 'Alex Nguyen',
-      role: 'Head of Strategy',
-      image: 'https://images.unsplash.com/photo-1603415526960-f7e0328ad654?w=300&h=300&fit=crop',
-    },
-    {
-      name: 'Sophie Patel',
-      role: 'Head of Outreach',
-      image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&h=300&fit=crop',
-    },
-    {
-      name: 'William Harris',
-      role: 'Head of Marketing',
-      image: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=300&h=300&fit=crop',
-    },
-  ];
 
   return (
     <Box>
