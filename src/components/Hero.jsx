@@ -4,36 +4,29 @@ import Logo from "../assets/Updated no background logo.png";
 import nightskyline from "../assets/night skyline.jpg";
 import cityFromBeach from "../assets/city-from-beach.jpg";
 import beachAerial from "../assets/beach-aerial.jpg";
-import flag from :../assets/flag.avif";
+import flag from "../assets/flag.avif";
 import womanAtSurfersParadise from "../assets/womanatsurfersparadise.jpg";
 
 export default function Hero() {
   const images = [
     "https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg",
     nightskyline,
-    womanAtSurfersParadise
+    womanAtSurfersParadise,
     flag
   ];
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 8000); // Change image every 8 seconds
+    }, 8000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
-    <Box
-      sx={{
-        position: "relative",
-        width: "100%",
-        height: "100vh",
-        overflow: "hidden",
-      }}
-    >
-      {/* Background Images with Crossfade */}
+    <Box sx={{ position: "relative", width: "100%", height: "100vh", overflow: "hidden" }}>
       {images.map((image, index) => (
         <Box
           key={index}
@@ -52,7 +45,7 @@ export default function Hero() {
           }}
         />
       ))}
-      {/* Dark overlay for readability */}
+
       <Box
         sx={{
           position: "absolute",
@@ -61,10 +54,7 @@ export default function Hero() {
             "linear-gradient(135deg, rgba(27, 60, 83, 0.4) 0%, rgba(35, 76, 106, 0.4) 50%, rgba(69, 104, 130, 0.4) 100%)",
         }}
       />
-              {/* <Box sx={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.45)' }} /> */}
-      
 
-      {/* Centered Text */}
       <Box
         sx={{
           position: "relative",
@@ -79,26 +69,6 @@ export default function Hero() {
           px: 2,
         }}
       >
-
-        {/* Logo with Thick White Outline */}
-        {/* <Box
-          sx={{
-            mb: 3,
-            display: "inline-block",
-            filter: `
-         drop-shadow(0 0 4px white)
-         drop-shadow(0 0 4px white)
-       `,
-          }}
-        >
-          <img
-            src={Logo}
-            alt="Institute Logo"
-            style={{ height: "200px", display: "block", margin: "0 auto" }}
-          />
-        </Box> */}
-
-
         <Typography
           variant="h1"
           sx={{
@@ -122,8 +92,7 @@ export default function Hero() {
             fontSize: { xs: "1.2rem", md: "1.4rem" },
           }}
         >
-          Rejuvenating the Australian Right through policy, strategy and
-          training.
+          Rejuvenating the Australian Right through policy, strategy and training.
         </Typography>
       </Box>
     </Box>
