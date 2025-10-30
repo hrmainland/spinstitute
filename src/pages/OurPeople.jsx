@@ -43,7 +43,7 @@ export default function OurPeople() {
 
   return (
     <Box>
-      {/* === Full-width Banner with Image Background === */}
+      {/* === Full-width Banner === */}
       <Box
         sx={{
           position: 'relative',
@@ -57,10 +57,8 @@ export default function OurPeople() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        {/* Dark overlay for readability */}
         <Box sx={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.45)' }} />
 
-        {/* Centered text */}
         <Box
           sx={{
             position: 'relative',
@@ -78,22 +76,13 @@ export default function OurPeople() {
         >
           <Typography
             variant="h2"
-            sx={{
-              fontSize: { xs: '2.5rem', md: '4rem' },
-              fontWeight: 700,
-              mb: 2,
-            }}
+            sx={{ fontSize: { xs: '2.5rem', md: '4rem' }, fontWeight: 700, mb: 2 }}
           >
             Our People
           </Typography>
           <Typography
             variant="body1"
-            sx={{
-              maxWidth: 700,
-              fontSize: { xs: '1.1rem', md: '1.3rem' },
-              fontWeight: 300,
-              lineHeight: 1.8,
-            }}
+            sx={{ maxWidth: 700, fontSize: { xs: '1.1rem', md: '1.3rem' }, fontWeight: 300, lineHeight: 1.8 }}
           >
             Our people are embedded in existing political parties, academia, the bureaucracy,
             commerce and the law. We have networks around the country and regularly host events in
@@ -106,11 +95,7 @@ export default function OurPeople() {
       <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
         <Grid container spacing={{ xs: 4, sm: 5, md: 6 }} justifyContent="center">
           {teamMembers.map((member, index) => (
-            <Grid
-              item
-              key={index}
-              sx={{ display: 'flex', flexBasis: CARD_WIDTH, maxWidth: CARD_WIDTH }}
-            >
+            <Grid item key={index} sx={{ display: 'flex', flexBasis: CARD_WIDTH, maxWidth: CARD_WIDTH }}>
               <Paper
                 elevation={0}
                 sx={{
@@ -138,15 +123,7 @@ export default function OurPeople() {
                     src={member.image}
                     alt={member.name}
                     loading="lazy"
-                    style={{
-                      position: 'absolute',
-                      inset: 0,
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'center',
-                      display: 'block',
-                    }}
+                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
                   />
                 </Box>
 
@@ -161,24 +138,10 @@ export default function OurPeople() {
                     minHeight: TEXT_ZONE_MIN_HEIGHT,
                   }}
                 >
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      color: 'primary.main',
-                      fontWeight: 600,
-                      lineHeight: 1.25,
-                    }}
-                  >
+                  <Typography variant="h5" sx={{ color: 'primary.main', fontWeight: 600, lineHeight: 1.25 }}>
                     {member.name}
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      color: 'text.secondary',
-                      fontStyle: 'italic',
-                      fontWeight: 400,
-                    }}
-                  >
+                  <Typography variant="body2" sx={{ color: 'text.secondary', fontStyle: 'italic', fontWeight: 400 }}>
                     {member.role}
                   </Typography>
                 </Box>
