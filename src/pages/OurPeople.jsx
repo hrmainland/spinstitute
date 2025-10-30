@@ -3,7 +3,7 @@ import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 
 // Import local images
 import bannerImage from '../assets/surf-life-saving-club.jpg';
-import johnHeadshot from '../assets/AI_headshot.jpg';
+import johnHeadshot from 'https://images.squarespace-cdn.com/content/v1/67e63b9be0acbc7df97a68b2/ce2b1139-e329-45d2-a87a-8a5d807ef4ab/Mainland+John+-+Garran+Headshot.jpg?format=500w';
 
 export default function OurPeople() {
   const CARD_WIDTH = 280;
