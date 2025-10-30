@@ -4,6 +4,7 @@ import Logo from "../assets/Updated no background logo.png";
 import cityFromBeach from "../assets/city-from-beach.jpg";
 import beachAerial from "../assets/beach-aerial.jpg";
 import womanAtSurfersParadise from "../assets/womanatsurfersparadise.jpg";
+import surfLifeSavingClub from "../assets/surf-life-saving-club.jpg";
 
 export default function Hero() {
   const images = [
