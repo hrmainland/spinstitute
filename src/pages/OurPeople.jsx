@@ -1,9 +1,8 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 
-// Import local images
+// Local banner image
 import bannerImage from '../assets/surf-life-saving-club.jpg';
-import johnHeadshot from 'https://images.squarespace-cdn.com/content/v1/67e63b9be0acbc7df97a68b2/ce2b1139-e329-45d2-a87a-8a5d807ef4ab/Mainland+John+-+Garran+Headshot.jpg?format=500w';
 
 export default function OurPeople() {
   const CARD_WIDTH = 280;
@@ -13,7 +12,7 @@ export default function OurPeople() {
     {
       name: 'John Mainland',
       role: 'President',
-      image: johnHeadshot, // updated with local headshot
+      image: 'https://images.squarespace-cdn.com/content/v1/67e63b9be0acbc7df97a68b2/ce2b1139-e329-45d2-a87a-8a5d807ef4ab/Mainland+John+-+Garran+Headshot.jpg?format=500w',
     },
     {
       name: 'Chris Brown',
