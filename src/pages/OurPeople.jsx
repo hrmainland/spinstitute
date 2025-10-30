@@ -1,6 +1,10 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 
+// Import local images
+import bannerImage from '../assets/surf-life-saving-club.jpg';
+import johnHeadshot from '../assets/AI headshot.jpg';
+
 export default function OurPeople() {
   const CARD_WIDTH = 280;
   const TEXT_ZONE_MIN_HEIGHT = 100;
@@ -9,7 +13,7 @@ export default function OurPeople() {
     {
       name: 'John Mainland',
       role: 'President',
-      image: 'src/assets/AI headshot.jpg',
+      image: johnHeadshot, // updated with local headshot
     },
     {
       name: 'Chris Brown',
@@ -48,7 +52,7 @@ export default function OurPeople() {
           minWidth: '100%',
           height: '100vh',
           overflow: 'hidden',
-          backgroundImage: 'url(src/assets/surf-life-saving-club.jpg)',
+          backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
