@@ -1,12 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
-
-// Local images
-import bannerImage from '../assets/surf-life-saving-club.jpg';
 import johnHeadshot from '../assets/AI_headshot.jpg';
-// Add other team members' local headshots here, e.g.:
-// import janeDoe from '../assets/Jane_headshot.jpg';
-// import alexNguyen from '../assets/Alex_headshot.jpg';
 
 const teamMembers = [
   {
@@ -14,17 +8,6 @@ const teamMembers = [
     role: 'President',
     image: johnHeadshot,
   },
-  // Example of adding more local team members:
-  // {
-  //   name: 'Jane Doe',
-  //   role: 'Vice President',
-  //   image: janeDoe,
-  // },
-  // {
-  //   name: 'Alex Nguyen',
-  //   role: 'Head of Strategy',
-  //   image: alexNguyen,
-  // },
 ];
 
 export default function OurPeople() {
@@ -41,7 +24,7 @@ export default function OurPeople() {
           minWidth: '100%',
           height: '100vh',
           overflow: 'hidden',
-          backgroundImage: `url(${bannerImage})`,
+          backgroundImage: `url('https://media.istockphoto.com/id/1204407641/photo/two-australian-lifeguards.jpg?s=612x612&w=0&k=20&c=t-5O00Qd8-p_np4hM4OJBknHvZ3OshfLhw9umYEteCw=')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
