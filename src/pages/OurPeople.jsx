@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 import johnHeadshot from '../assets/AI_headshot.jpg';
+import bannerImage from '../assets/surf_life_saving_nsw_cover.jpg'; // <-- local banner
 
 const teamMembers = [
   {
@@ -24,7 +25,7 @@ export default function OurPeople() {
           minWidth: '100%',
           height: '100vh',
           overflow: 'hidden',
-          backgroundImage: `url('https://media.istockphoto.com/id/1204407641/photo/two-australian-lifeguards.jpg?s=612x612&w=0&k=20&c=t-5O00Qd8-p_np4hM4OJBknHvZ3OshfLhw9umYEteCw=')`,
+          backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
