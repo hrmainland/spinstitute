@@ -163,7 +163,7 @@ export default function OurWork() {
                   transition: 'color 0.3s ease',
                 }}
               >
-                Access Report
+                Request Report
                 <ArrowForwardIcon sx={{ fontSize: '1.2rem', transition: 'transform 0.3s ease' }} />
               </MuiLink>
             </Paper>
