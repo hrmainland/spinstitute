@@ -11,17 +11,17 @@ export default function OurWork() {
       url: 'https://www.sample-pdf.com/2024-impact-report.pdf',
     },
     {
-      title: 'Our Promise on Immigration',
+      title: 'Our Vision on Immigration',
       description: 'A deep-dive on renewed immigration policy for a cohesive, prosperous and self-confident Australia.',
       url: 'https://www.example.com/strategic-overview',
     },
     {
-      title: 'Our Promise on Energy',
+      title: 'Our Vision on Energy',
       description: 'Policy recommendations to unleash Australian energy production for households and businesses.',
       url: 'https://www.example.com/research',
     },
     {
-      title: 'Our Promise on Housing',
+      title: 'Our Vision on Housing',
       description: 'How do we restore the dream of home ownership for a new generation of Australians?.',
       url: 'https://www.example.com/case-studies',
     },
