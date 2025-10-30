@@ -9,7 +9,7 @@ export default function OurPeople() {
     {
       name: 'John Mainland',
       role: 'President',
-      image: 'src/assets/AI headshot.jpg', // ✅ your local image
+      image: 'src/assets/AI headshot.jpg',
     },
     {
       name: 'Chris Brown',
@@ -40,7 +40,7 @@ export default function OurPeople() {
 
   return (
     <Box>
-      {/* === Full-width Banner with Video Background === */}
+      {/* === Full-width Banner with Image Background === */}
       <Box
         sx={{
           position: 'relative',
@@ -48,29 +48,16 @@ export default function OurPeople() {
           minWidth: '100%',
           height: '100vh',
           overflow: 'hidden',
+          backgroundImage: 'url(src/assets/surf-life-saving-club.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: -1,
-          }}
-        >
-          <source src="/videos/1000029335 (1) (1).mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
+        {/* Dark overlay for readability */}
         <Box sx={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.45)' }} />
 
+        {/* Centered text */}
         <Box
           sx={{
             position: 'relative',
