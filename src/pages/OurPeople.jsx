@@ -3,15 +3,39 @@ import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 
 export default function OurPeople() {
   const CARD_WIDTH = 280;
-  const TEXT_ZONE_MIN_HEIGHT = 80;
+  const TEXT_ZONE_MIN_HEIGHT = 100;
 
   const teamMembers = [
-    { name: 'Taylor Lee', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
-    { name: 'Chris Brown', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
-    { name: 'Taylor Lee', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
-    { name: 'Chris Brown', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
-    { name: 'Taylor Lee', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
-    { name: 'Chris Brown', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
+    {
+      name: 'John Mainland',
+      role: 'President',
+      image: 'src/assets/AI headshot.jpg', // ✅ your local image
+    },
+    {
+      name: 'Chris Brown',
+      role: 'Vice President',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
+    },
+    {
+      name: 'Taylor Lee',
+      role: 'Head of Policy',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop',
+    },
+    {
+      name: 'Alex Nguyen',
+      role: 'Head of Strategy',
+      image: 'https://images.unsplash.com/photo-1603415526960-f7e0328ad654?w=300&h=300&fit=crop',
+    },
+    {
+      name: 'Sophie Patel',
+      role: 'Head of Outreach',
+      image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&h=300&fit=crop',
+    },
+    {
+      name: 'William Harris',
+      role: 'Head of Marketing',
+      image: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=300&h=300&fit=crop',
+    },
   ];
 
   return (
@@ -26,7 +50,6 @@ export default function OurPeople() {
           overflow: 'hidden',
         }}
       >
-        {/* 🎥 Background Video from public folder */}
         <video
           autoPlay
           loop
@@ -46,10 +69,8 @@ export default function OurPeople() {
           Your browser does not support the video tag.
         </video>
 
-        {/* Dark overlay */}
         <Box sx={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.45)' }} />
 
-        {/* Centered text */}
         <Box
           sx={{
             position: 'relative',
@@ -85,8 +106,8 @@ export default function OurPeople() {
             }}
           >
             Our people are embedded in existing political parties, academia, the bureaucracy,
-            commerce and the law. We have networks around the country, and regularly host events in
-            Sydney and Canberra as well as Surfers Paradise.
+            commerce and the law. We have networks around the country and regularly host events in
+            Sydney, Canberra and Surfers Paradise.
           </Typography>
         </Box>
       </Box>
@@ -95,7 +116,11 @@ export default function OurPeople() {
       <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
         <Grid container spacing={{ xs: 4, sm: 5, md: 6 }} justifyContent="center">
           {teamMembers.map((member, index) => (
-            <Grid item key={index} sx={{ display: 'flex', flexBasis: CARD_WIDTH, maxWidth: CARD_WIDTH }}>
+            <Grid
+              item
+              key={index}
+              sx={{ display: 'flex', flexBasis: CARD_WIDTH, maxWidth: CARD_WIDTH }}
+            >
               <Paper
                 elevation={0}
                 sx={{
@@ -152,13 +177,19 @@ export default function OurPeople() {
                       color: 'primary.main',
                       fontWeight: 600,
                       lineHeight: 1.25,
-                      display: '-webkit-box',
-                      WebkitLineClamp: 2,
-                      WebkitBoxOrient: 'vertical',
-                      overflow: 'hidden',
                     }}
                   >
                     {member.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: 'text.secondary',
+                      fontStyle: 'italic',
+                      fontWeight: 400,
+                    }}
+                  >
+                    {member.role}
                   </Typography>
                 </Box>
               </Paper>
