@@ -3,7 +3,7 @@ import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 
 // Import local images
 import bannerImage from '../assets/surf-life-saving-club.jpg';
-import johnHeadshot from '../assets/AI headshot.jpg';
+import johnHeadshot from '../assets/AI_headshot.jpg';
 
 export default function OurPeople() {
   const CARD_WIDTH = 280;
