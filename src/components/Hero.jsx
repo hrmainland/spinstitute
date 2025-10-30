@@ -9,8 +9,8 @@ import womanAtSurfersParadise from "../assets/womanatsurfersparadise.jpg";
 
 export default function Hero() {
   const images = [
-    "https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg",
     nightskyline,
+    "https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg",
     womanAtSurfersParadise,
     flag
   ];
