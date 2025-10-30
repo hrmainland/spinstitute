@@ -6,10 +6,10 @@ export default function OurPeople() {
   const TEXT_ZONE_MIN_HEIGHT = 80;
 
   const teamMembers = [
-    { name: 'John Doe', image: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Kevin_Hart_2014_%28cropped_2%29.jpg' },
-    { name: 'Jane Smith', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Shaquille_O%27Neal_Free_Throw.jpg/250px-Shaquille_O%27Neal_Free_Throw.jpg' },
-    { name: 'Peng Shuai', image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Peng_Shuai_Shirts_Australian_Open_%28cropped%29.jpg' },
-    { name: 'Alex Johnson', image: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Portrait_Placeholder.png' },
+    { name: 'Taylor Lee', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
+    { name: 'Chris Brown', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
+    { name: 'Taylor Lee', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
+    { name: 'Chris Brown', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
     { name: 'Taylor Lee', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
     { name: 'Chris Brown', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop' },
   ];
@@ -86,7 +86,7 @@ export default function OurPeople() {
           >
             Our people are embedded in existing political parties, academia, the bureaucracy,
             commerce and the law. We have networks around the country, and regularly host events in
-            Sydney and Canberra as well as our spiritual home of Surfers Paradise.
+            Sydney and Canberra as well as Surfers Paradise.
           </Typography>
         </Box>
       </Box>
