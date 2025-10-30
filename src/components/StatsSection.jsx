@@ -3,10 +3,10 @@ import { Box, Container, Typography } from '@mui/material';
 
 export default function MissionStatement() {
   const missionPoints = [
-    "Overhaul Australia's immigration and asylum policies to drastically reduce inbound migration to Australia.",
+    "Overhaul Australia's immigration and asylum policies to significantly reduce inbound migration to Australia.",
     "Unleash Australian energy production to reduce energy prices.",
     "Dramatically increase housing supply through increased construction, and immigration cuts.",
-    "Tackle the lack of democratic accountability in federal and state bureaucracies by establishing incentive structures to align departmental outcomes with public policy preferences.",
+    "Tackle the lack of democratic accountability in federal and state bureaucracies to align departmental outcomes with public policy preferences.",
     "Tackle anti-Australianism in our education system through overhaul of our education institutions and curriculum."
   ];
 
