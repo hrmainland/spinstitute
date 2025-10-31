@@ -4,15 +4,13 @@ import Logo from "../assets/Updated no background logo.png";
 import nightskyline from "../assets/night skyline.jpg";
 import cityFromBeach from "../assets/city-from-beach.jpg";
 import beachAerial from "../assets/beach-aerial.jpg";
-import flag from "../assets/flag.avif";
 import womanAtSurfersParadise from "../assets/womanatsurfersparadise.jpg";
 
 export default function Hero() {
   const images = [
     nightskyline,
     "https://www.signatureluxurytravel.com.au/wp-content/uploads/2023/03/DGC_Aerial20_00040_edit.jpg",
-    womanAtSurfersParadise,
-    flag
+    womanAtSurfersParadise
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
