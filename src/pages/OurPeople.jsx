@@ -1,14 +1,14 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 
-// Team member photos
+// === Team member photos ===
 import johnMainland from '../assets/John-Mainland.jpg';
 import justinMcGovern from '../assets/Justin-McGovern.jpg';
 import willBennett from '../assets/Will-Bennett.jpg';
-import brianJackson from '../assets/src/1000029810.jpg';
+import brianJackson from '../assets/1000029810.jpg'; // fixed path
 import drewPavlou from '../assets/Drew-Pavlou.jpg';
 
-// Full-width banner image
+// === Full-width banner image ===
 import bannerImage from '../assets/surf_life_saving_nsw_cover.jpg';
 
 export default function OurPeople() {
@@ -25,7 +25,7 @@ export default function OurPeople() {
     },
     {
       name: 'Brian Jackson',
-      role: 'Director of Finance'
+      role: 'Director of Finance',
       image: brianJackson,
     },
     {
@@ -56,7 +56,13 @@ export default function OurPeople() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <Box sx={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.45)' }} />
+        <Box
+          sx={{
+            position: 'absolute',
+            inset: 0,
+            backgroundColor: 'rgba(0,0,0,0.45)',
+          }}
+        />
 
         <Box
           sx={{
@@ -75,7 +81,11 @@ export default function OurPeople() {
         >
           <Typography
             variant="h2"
-            sx={{ fontSize: { xs: '2.5rem', md: '4rem' }, fontWeight: 700, mb: 2 }}
+            sx={{
+              fontSize: { xs: '2.5rem', md: '4rem' },
+              fontWeight: 700,
+              mb: 2,
+            }}
           >
             Our People
           </Typography>
@@ -88,9 +98,10 @@ export default function OurPeople() {
               lineHeight: 1.8,
             }}
           >
-            Our people are embedded in existing political parties, academia, the bureaucracy,
-            commerce and the law. We have networks around the country and regularly host events in
-            Sydney, Canberra and Surfers Paradise.
+            Our people are embedded in existing political parties, academia,
+            the bureaucracy, commerce and the law. We have networks around the
+            country and regularly host events in Sydney, Canberra and Surfers
+            Paradise.
           </Typography>
         </Box>
       </Box>
@@ -128,7 +139,10 @@ export default function OurPeople() {
                   >
                     {member.name}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary', fontStyle: 'italic' }}>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: 'text.secondary', fontStyle: 'italic' }}
+                  >
                     {member.role}
                   </Typography>
                 </Box>
