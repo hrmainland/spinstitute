@@ -1,6 +1,9 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 import johnHeadshot from '../assets/AI_headshot.jpg';
+import drewHeadshot from '../assets/Drew-Pavlou.jpg';
+import justinHeadshot from '../assets/Justin-McGovern.jpg';
+import willHeadshot from '../assets/Will-Bennett.jpg';
 import bannerImage from '../assets/surf_life_saving_nsw_cover.jpg'; // <-- local banner
 
 const teamMembers = [
