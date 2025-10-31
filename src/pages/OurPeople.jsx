@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 
 // Team member photos
-import johnMainland from '../assets/AI_headshot.jpg';
+import johnMainland from '../assets/John-Mainland.jpg';
 import justinMcGovern from '../assets/Justin-McGovern.jpg';
 import willBennett from '../assets/Will-Bennett.jpg';
 import drewPavlou from '../assets/Drew-Pavlou.jpg';
