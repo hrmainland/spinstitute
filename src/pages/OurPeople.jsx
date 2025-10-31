@@ -5,6 +5,7 @@ import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 import johnMainland from '../assets/John-Mainland.jpg';
 import justinMcGovern from '../assets/Justin-McGovern.jpg';
 import willBennett from '../assets/Will-Bennett.jpg';
+import brianJackson from '../assets/src/1000029810.jpg';
 import drewPavlou from '../assets/Drew-Pavlou.jpg';
 
 // Full-width banner image
@@ -14,23 +15,28 @@ export default function OurPeople() {
   const teamMembers = [
     {
       name: 'John Mainland',
-      role: 'President',
+      role: 'Executive Director',
       image: johnMainland,
     },
     {
       name: 'Justin McGovern',
-      role: 'Vice President',
+      role: 'Deputy Executive Director',
       image: justinMcGovern,
     },
     {
-      name: 'Will Bennett',
-      role: 'Secretary',
-      image: willBennett,
+      name: 'Brian Jackson',
+      role: 'Director of Finance'
+      image: brianJackson,
     },
     {
       name: 'Drew Pavlou',
-      role: 'Media Outreach',
+      role: 'Director of Media and Outreach',
       image: drewPavlou,
+    },
+    {
+      name: 'Will Bennett',
+      role: 'Board Secretary',
+      image: willBennett,
     },
   ];
 
