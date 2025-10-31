@@ -12,6 +12,21 @@ const teamMembers = [
     role: 'President',
     image: johnHeadshot,
   },
+  {
+    name: 'Justin McGovern',
+    role: 'Vice President',
+    image: justinHeadshot,
+  },
+  {
+    name: 'Will Bennett',
+    role: 'Secretary',
+    image: willHeadshot,
+  },
+  {
+    name: 'Drew Pavlou',
+    role: 'Media Outreach',
+    image: drewHeadshot,
+  },
 ];
 
 export default function OurPeople() {
@@ -59,7 +74,12 @@ export default function OurPeople() {
           </Typography>
           <Typography
             variant="body1"
-            sx={{ maxWidth: 700, fontSize: { xs: '1.1rem', md: '1.3rem' }, fontWeight: 300, lineHeight: 1.8 }}
+            sx={{
+              maxWidth: 700,
+              fontSize: { xs: '1.1rem', md: '1.3rem' },
+              fontWeight: 300,
+              lineHeight: 1.8,
+            }}
           >
             Our people are embedded in existing political parties, academia, the bureaucracy,
             commerce and the law. We have networks around the country and regularly host events in
@@ -70,9 +90,24 @@ export default function OurPeople() {
 
       {/* === Team Grid Section === */}
       <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
-        <Grid container spacing={{ xs: 4, sm: 5, md: 6 }} justifyContent="center">
+        <Grid
+          container
+          spacing={{ xs: 4, sm: 5, md: 6 }}
+          justifyContent="center"
+          alignItems="flex-start"
+        >
           {teamMembers.map((member, index) => (
-            <Grid item key={index} sx={{ display: 'flex', flexBasis: CARD_WIDTH, maxWidth: CARD_WIDTH }}>
+            <Grid
+              item
+              key={index}
+              xs={12}
+              sm={6}
+              md={4} // ensures 3 cards per row on desktop
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
               <Paper
                 elevation={0}
                 sx={{
@@ -100,7 +135,15 @@ export default function OurPeople() {
                     src={member.image}
                     alt={member.name}
                     loading="lazy"
-                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center',
+                      display: 'block',
+                    }}
                   />
                 </Box>
 
@@ -115,10 +158,20 @@ export default function OurPeople() {
                     minHeight: TEXT_ZONE_MIN_HEIGHT,
                   }}
                 >
-                  <Typography variant="h5" sx={{ color: 'primary.main', fontWeight: 600, lineHeight: 1.25 }}>
+                  <Typography
+                    variant="h5"
+                    sx={{ color: 'primary.main', fontWeight: 600, lineHeight: 1.25 }}
+                  >
                     {member.name}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary', fontStyle: 'italic', fontWeight: 400 }}>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: 'text.secondary',
+                      fontStyle: 'italic',
+                      fontWeight: 400,
+                    }}
+                  >
                     {member.role}
                   </Typography>
                 </Box>
