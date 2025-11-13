@@ -17,37 +17,37 @@ export default function OurPeople() {
       name: 'John Mainland',
       role: 'Executive Director',
       image: johnMainland,
-      bio: 'John Mainland is a commercial lawyer who has worked across law, politics, commerce and policy development. He has served as an executive in several Australian businesses and held leadership roles within the Australian Liberal Party. A speaker of five languages, John holds two First Class Honours degrees in Law from the University of Oxford (LLB, BCL).',
+      bio: 'John Mainland is a commercial lawyer with experience across law, politics, commerce, and policy development. He holds two First Class Honours degrees in Law from Oxford and speaks five languages.',
     },
     {
       name: 'Justin McGovern',
       role: 'Deputy Executive Director',
       image: justinMcGovern,
-      bio: 'Justin McGovern is a lawyer with extensive experience in government and policy. He has held senior advisory roles to Australian Government ministers and the Royal Australian Air Force. Justin brings a deep understanding of regulatory frameworks, governance, and strategic decision-making across public and private sectors. He was the recipient of the Ramsay Scholarship to the Oxford Master of Law (BCL).',
+      bio: 'Justin McGovern is a lawyer experienced in government and policy, with senior advisory roles in both public and private sectors. Recipient of the Ramsay Scholarship to Oxford (BCL).',
     },
     {
       name: 'Monica Lewis',
       role: 'Director of Research',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZsINAeXhg_aONZrbZrMTZEjopaRJ1xmlVA&s',
-      bio: 'Pablo Ruiz Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and theatre designer who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement.',
+      bio: 'Monica Lewis leads research initiatives, focusing on data-driven insights and policy evaluation.',
     },
     {
       name: 'Brian Jackson',
       role: 'Director of Finance',
       image: brianJackson,
-      bio: 'Pablo Ruiz Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and theatre designer who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement.',
+      bio: 'Brian Jackson manages financial strategy and ensures robust fiscal oversight across the organisation.',
     },
     {
       name: 'Drew Pavlou',
       role: 'Director of Media and Outreach',
       image: drewPavlou,
-      bio: 'Pablo Ruiz Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and theatre designer who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement.',
+      bio: 'Drew Pavlou drives media strategy and outreach initiatives, strengthening public engagement.',
     },
     {
       name: 'Will Bennett',
       role: 'Board Secretary',
       image: willBennett,
-      bio: 'Pablo Ruiz Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and theatre designer who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement.',
+      bio: 'Will Bennett oversees governance and administration, ensuring board operations run smoothly.',
     },
   ];
 
@@ -57,14 +57,12 @@ export default function OurPeople() {
       <Box
         sx={{
           position: 'relative',
-          width: '100vw',
-          minWidth: '100%',
-          height: '100vh',
+          width: '100%',
+          height: { xs: '50vh', md: '70vh' },
           overflow: 'hidden',
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
         }}
       >
         <Box
@@ -92,7 +90,7 @@ export default function OurPeople() {
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: '2.5rem', md: '4rem' },
+              fontSize: { xs: '2rem', md: '4rem' },
               fontWeight: 700,
               mb: 2,
             }}
@@ -103,15 +101,12 @@ export default function OurPeople() {
             variant="body1"
             sx={{
               maxWidth: 700,
-              fontSize: { xs: '1.1rem', md: '1.3rem' },
+              fontSize: { xs: '1rem', md: '1.2rem' },
               fontWeight: 300,
-              lineHeight: 1.8,
+              lineHeight: 1.6,
             }}
           >
-            Our people are embedded in existing political parties, academia,
-            the bureaucracy, commerce and the law. We have networks around the
-            country and regularly host events in Sydney, Canberra and Surfers
-            Paradise.
+            Our people are embedded in political parties, academia, the bureaucracy, commerce, and the law. We have networks around the country and regularly host events in Sydney, Canberra, and Surfers Paradise.
           </Typography>
         </Box>
       </Box>
@@ -130,7 +125,9 @@ export default function OurPeople() {
                   border: '1px solid rgba(210, 193, 182, 0.3)',
                   display: 'flex',
                   flexDirection: 'column',
-                  height: '100%',
+                  alignItems: 'center',
+                  px: 2,
+                  py: 3,
                 }}
               >
                 <Box
@@ -138,51 +135,19 @@ export default function OurPeople() {
                   src={member.image}
                   alt={member.name}
                   sx={{
-                    width: '100%',
-                    height: 160,
+                    width: 140,
+                    height: 140,
                     objectFit: 'cover',
-                    flexShrink: 0,
-                    backgroundColor: 'rgba(27, 60, 83, 0.05)',
+                    borderRadius: 2,
+                    mb: 2,
                   }}
                 />
-
-                {/* Fixed-size text box */}
-                <Box
-                  sx={{
-                    p: 2,
-                    height: 220, // fixed height for text
-                    overflow: 'hidden',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'flex-start',
-                  }}
+                <Typography
+                  variant="subtitle1"
+                  sx={{ fontWeight: 600, mb: 0.5, color: 'primary.main' }}
                 >
-                  <Typography
-                    variant="h6"
-                    sx={{ fontWeight: 600, mb: 1, color: 'primary.main' }}
-                  >
-                    {member.name}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{ color: 'text.secondary', fontStyle: 'italic', mb: 1 }}
-                  >
-                    {member.role}
-                  </Typography>
-                  {member.bio && (
-                    <Typography
-                      variant="body2"
-                      sx={{ color: 'text.primary', lineHeight: 1.5 }}
-                    >
-                      {member.bio}
-                    </Typography>
-                  )}
-                </Box>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </Box>
-  );
-}
+                  {member.name}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ color: 'text.sec
