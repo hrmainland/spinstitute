@@ -47,7 +47,7 @@ export default function OurPeople() {
       name: 'Will Bennett',
       role: 'Board Secretary',
       image: willBennett,
-      bio: 'Will Bennett oversees governance and administration, ensuring board operations run smoothly.',
+      bio: 'Will is a journalist and policy specialist with experience across media, government, and the private sector. He has written for The Spectator, the AFR, and Forbes in New York, and has worked as a policy adviser and consultant. He holds master’s degrees from New York University (Business and Economic Reporting) and the University of Cambridge (MPP).',
     },
   ];
 
