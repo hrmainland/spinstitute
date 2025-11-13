@@ -138,13 +138,14 @@ export default function OurPeople() {
                   alt={member.name}
                   sx={{
                     width: '100%',
-                    height: 220,       // uniform height for all images
-                    maxHeight: 220,    // ensures no stretching
+                    height: 160,       // smaller, uniform height
+                    maxHeight: 160,
                     objectFit: 'cover',
+                    flexShrink: 0,
                     backgroundColor: 'rgba(27, 60, 83, 0.05)',
                   }}
                 />
-                <Box sx={{ p: 2 }}>
+                <Box sx={{ p: 1.5 }}>
                   <Typography
                     variant="h6"
                     sx={{ fontWeight: 600, mb: 1, color: 'primary.main' }}
