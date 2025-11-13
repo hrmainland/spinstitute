@@ -74,7 +74,6 @@ export default function OurPeople() {
             backgroundColor: 'rgba(0,0,0,0.45)',
           }}
         />
-
         <Box
           sx={{
             position: 'relative',
@@ -140,3 +139,50 @@ export default function OurPeople() {
                   alt={member.name}
                   sx={{
                     width: '100%',
+                    height: 160,
+                    objectFit: 'cover',
+                    flexShrink: 0,
+                    backgroundColor: 'rgba(27, 60, 83, 0.05)',
+                  }}
+                />
+
+                {/* Fixed-size text box */}
+                <Box
+                  sx={{
+                    p: 2,
+                    height: 220, // fixed height for text
+                    overflow: 'hidden',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{ fontWeight: 600, mb: 1, color: 'primary.main' }}
+                  >
+                    {member.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: 'text.secondary', fontStyle: 'italic', mb: 1 }}
+                  >
+                    {member.role}
+                  </Typography>
+                  {member.bio && (
+                    <Typography
+                      variant="body2"
+                      sx={{ color: 'text.primary', lineHeight: 1.5 }}
+                    >
+                      {member.bio}
+                    </Typography>
+                  )}
+                </Box>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
+  );
+}
