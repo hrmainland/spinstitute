@@ -128,7 +128,6 @@ export default function OurPeople() {
                   borderRadius: 3,
                   overflow: 'hidden',
                   textAlign: 'center',
-                  height: '100%',
                   border: '1px solid rgba(210, 193, 182, 0.3)',
                 }}
               >
@@ -138,7 +137,7 @@ export default function OurPeople() {
                   alt={member.name}
                   sx={{
                     width: '100%',
-                    height: 160,       // smaller, uniform height
+                    height: 160,       // fixed image height
                     maxHeight: 160,
                     objectFit: 'cover',
                     flexShrink: 0,
