@@ -29,25 +29,25 @@ export default function OurPeople() {
       name: 'Monica Lewis',
       role: 'Director of Research',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZsINAeXhg_aONZrbZrMTZEjopaRJ1xmlVA&s',
-      bio: '', // Add Monica's bio later
+      bio: 'Pablo Ruiz Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and theatre designer who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement.',
     },
     {
       name: 'Brian Jackson',
       role: 'Director of Finance',
       image: brianJackson,
-      bio: '',
+      bio: 'Pablo Ruiz Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and theatre designer who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement.',
     },
     {
       name: 'Drew Pavlou',
       role: 'Director of Media and Outreach',
       image: drewPavlou,
-      bio: '',
+      bio: 'Pablo Ruiz Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and theatre designer who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement.',
     },
     {
       name: 'Will Bennett',
       role: 'Board Secretary',
       image: willBennett,
-      bio: '',
+      bio: 'Pablo Ruiz Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and theatre designer who spent most of his adult life in France. One of the most influential artists of the 20th century, he is known for co-founding the Cubist movement.',
     },
   ];
 
@@ -131,6 +131,7 @@ export default function OurPeople() {
                   border: '1px solid rgba(210, 193, 182, 0.3)',
                   display: 'flex',
                   flexDirection: 'column',
+                  height: '100%',
                 }}
               >
                 <Box
@@ -139,37 +140,3 @@ export default function OurPeople() {
                   alt={member.name}
                   sx={{
                     width: '100%',
-                    height: 160,       // fixed height for all images
-                    maxHeight: 160,
-                    objectFit: 'cover',
-                    flexShrink: 0,
-                    backgroundColor: 'rgba(27, 60, 83, 0.05)',
-                  }}
-                />
-                <Box sx={{ p: 2, flexGrow: 1 }}>
-                  <Typography
-                    variant="h6"
-                    sx={{ fontWeight: 600, mb: 1, color: 'primary.main' }}
-                  >
-                    {member.name}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{ color: 'text.secondary', fontStyle: 'italic', mb: 1 }}
-                  >
-                    {member.role}
-                  </Typography>
-                  {member.bio && (
-                    <Typography variant="body2" sx={{ color: 'text.primary', lineHeight: 1.5 }}>
-                      {member.bio}
-                    </Typography>
-                  )}
-                </Box>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </Box>
-  );
-}
