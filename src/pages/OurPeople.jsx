@@ -129,6 +129,8 @@ export default function OurPeople() {
                   overflow: 'hidden',
                   textAlign: 'center',
                   border: '1px solid rgba(210, 193, 182, 0.3)',
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}
               >
                 <Box
@@ -137,14 +139,14 @@ export default function OurPeople() {
                   alt={member.name}
                   sx={{
                     width: '100%',
-                    height: 160,       // fixed image height
+                    height: 160,       // fixed height for all images
                     maxHeight: 160,
                     objectFit: 'cover',
                     flexShrink: 0,
                     backgroundColor: 'rgba(27, 60, 83, 0.05)',
                   }}
                 />
-                <Box sx={{ p: 1.5 }}>
+                <Box sx={{ p: 2, flexGrow: 1 }}>
                   <Typography
                     variant="h6"
                     sx={{ fontWeight: 600, mb: 1, color: 'primary.main' }}
@@ -158,10 +160,7 @@ export default function OurPeople() {
                     {member.role}
                   </Typography>
                   {member.bio && (
-                    <Typography
-                      variant="body2"
-                      sx={{ color: 'text.primary', lineHeight: 1.6 }}
-                    >
+                    <Typography variant="body2" sx={{ color: 'text.primary', lineHeight: 1.5 }}>
                       {member.bio}
                     </Typography>
                   )}
