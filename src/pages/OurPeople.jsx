@@ -150,4 +150,26 @@ export default function OurPeople() {
                 </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: 'text.sec
+                  sx={{ color: 'text.secondary', fontStyle: 'italic', mb: 1 }}
+                >
+                  {member.role}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: 'text.primary',
+                    lineHeight: 1.4,
+                    fontSize: '0.8rem',
+                    textAlign: 'center',
+                  }}
+                >
+                  {member.bio}
+                </Typography>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
+  );
+}
