@@ -138,12 +138,13 @@ export default function OurPeople() {
                   alt={member.name}
                   sx={{
                     width: '100%',
-                    height: 280,
+                    height: 220,       // uniform height for all images
+                    maxHeight: 220,    // ensures no stretching
                     objectFit: 'cover',
                     backgroundColor: 'rgba(27, 60, 83, 0.05)',
                   }}
                 />
-                <Box sx={{ p: 3 }}>
+                <Box sx={{ p: 2 }}>
                   <Typography
                     variant="h6"
                     sx={{ fontWeight: 600, mb: 1, color: 'primary.main' }}
@@ -152,7 +153,7 @@ export default function OurPeople() {
                   </Typography>
                   <Typography
                     variant="body2"
-                    sx={{ color: 'text.secondary', fontStyle: 'italic', mb: 2 }}
+                    sx={{ color: 'text.secondary', fontStyle: 'italic', mb: 1 }}
                   >
                     {member.role}
                   </Typography>
