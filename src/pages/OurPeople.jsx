@@ -23,13 +23,13 @@ export default function OurPeople() {
       name: 'Justin McGovern',
       role: 'Deputy Executive Director',
       image: justinMcGovern,
-      bio: 'Justin is a lawyer with extensive experience in government and policy. He has held senior advisory roles to Australian Government ministers and the Royal Australian Air Force. Justin brings a deep understanding of regulatory frameworks, governance, and strategic decision-making across public and private sectors. He was the recipient of the Ramsay Scholarship to the Oxford Master of Law (BCL).',
+      bio: 'Justin is a seasoned commercial lawyer with extensive experience in government and policy. He has held senior advisory roles to Australian Government and served in the Royal Australian Air Force. Justin brings a deep understanding of regulatory frameworks, governance, and strategic decision-making across public and private sectors. He holds First Class degrees in Law and Arts, and was recently the recipient of the Ramsay Scholarship to the Oxford Master of Law (BCL).',
     },
     {
       name: 'Monica Lewis',
       role: 'Director of Research',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZsINAeXhg_aONZrbZrMTZEjopaRJ1xmlVA&s',
-      bio: 'Monica Lewis leads research initiatives, focusing on data-driven insights and policy evaluation.',
+      bio: 'Monica brings experience spanning consulting, banking, venture capital and strategy. She has held senior roles at Bain & Company, ANZ Ventures and Australian fintechs. Monica holds a Bachelor of Arts from the University of Sydney and completed the Venture Capital Executive Program at the University of California, Berkeley.',
     },
     {
       name: 'Brian Jackson',
@@ -41,7 +41,7 @@ export default function OurPeople() {
       name: 'Drew Pavlou',
       role: 'Director of Media and Outreach',
       image: drewPavlou,
-      bio: 'Drew Pavlou drives media strategy and outreach initiatives, strengthening public engagement.',
+      bio: 'Drew is an activist and media personality, known for critiquing communist and authoritarian governments. He has been retweeted by Elon Musk and JD Vance, and featured in global outlets including The New York Times, advocating for human rights, free speech, and democratic reform on the international stage..',
     },
     {
       name: 'Will Bennett',
