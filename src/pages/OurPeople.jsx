@@ -58,7 +58,7 @@ export default function OurPeople() {
         sx={{
           position: 'relative',
           width: '100%',
-          height: { xs: '50vh', md: '70vh' },
+          height: { xs: '100vh', md: '100vh' },
           overflow: 'hidden',
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
@@ -112,15 +112,16 @@ export default function OurPeople() {
       </Box>
 
       {/* === Team Grid Section === */}
-      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
-        <Grid container spacing={4} justifyContent="center">
+      <Container maxWidth="xl" sx={{ py: { xs: 6, md: 8 } }}>
+        <Grid container spacing={3} justifyContent="center">
           {teamMembers.map((member, index) => (
-            <Grid item key={index} xs={12} sm={6} md={3}>
+            <Grid item key={index} xs={4} sm={4} md={3}>
               <Paper
                 elevation={3}
                 sx={{
+                  width: 300,
+                  height: 450,
                   borderRadius: 3,
-                  overflow: 'hidden',
                   textAlign: 'center',
                   border: '1px solid rgba(210, 193, 182, 0.3)',
                   display: 'flex',
@@ -128,6 +129,7 @@ export default function OurPeople() {
                   alignItems: 'center',
                   px: 2,
                   py: 3,
+                  backgroundColor: '#fff',
                 }}
               >
                 <Box
@@ -140,31 +142,59 @@ export default function OurPeople() {
                     objectFit: 'cover',
                     borderRadius: 2,
                     mb: 2,
+                    flexShrink: 0,
+                  }}
+                />
+                <Box
+                  sx={{
+                    width: '80%',
+                    height: '1px',
+                    backgroundColor: 'rgba(210, 193, 182, 0.4)',
+                    mb: 1.5,
+                    flexShrink: 0,
                   }}
                 />
                 <Typography
                   variant="subtitle1"
-                  sx={{ fontWeight: 600, mb: 0.5, color: 'primary.main' }}
+                  sx={{ fontWeight: 600, mb: 0.5, color: 'primary.main', flexShrink: 0 }}
                 >
                   {member.name}
                 </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: 'text.secondary', fontStyle: 'italic', mb: 1 }}
+                  sx={{ color: 'text.secondary', fontStyle: 'italic', mb: 1, flexShrink: 0 }}
                 >
                   {member.role}
                 </Typography>
-                <Typography
-                  variant="body2"
+                <Box
                   sx={{
-                    color: 'text.primary',
-                    lineHeight: 1.4,
-                    fontSize: '0.8rem',
-                    textAlign: 'center',
+                    width: '80%',
+                    height: '1px',
+                    backgroundColor: 'rgba(210, 193, 182, 0.4)',
+                    mb: 1.5,
+                    flexShrink: 0,
+                  }}
+                />
+                <Box
+                  sx={{
+                    overflow: 'auto',
+                    flexGrow: 1,
+                    width: '100%',
+                    px: 1,
                   }}
                 >
-                  {member.bio}
-                </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: 'text.primary',
+                      lineHeight: 1.4,
+                      fontSize: '0.8rem',
+                      textAlign: 'center',
+                    }}
+                  >
+                    {member.bio}
+                  </Typography>
+                </Box>
               </Paper>
             </Grid>
           ))}
