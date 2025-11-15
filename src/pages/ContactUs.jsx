@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Container, Typography, Box, TextField, Button, Paper, Grid } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Box,
+  TextField,
+  Button,
+  Paper,
+  Grid,
+} from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -27,9 +35,21 @@ export default function ContactUs() {
   };
 
   const contactInfo = [
-    { icon: <EmailIcon sx={{ fontSize: 32 }} />, title: "Email", detail: "info@spi.org.au" },
-    { icon: <PhoneIcon sx={{ fontSize: 32 }} />, title: "Phone", detail: "+61 491 964 588" },
-    { icon: <LocationOnIcon sx={{ fontSize: 32 }} />, title: "Location", detail: "Gold Coast, Australia" },
+    {
+      icon: <EmailIcon sx={{ fontSize: 32 }} />,
+      title: "Email",
+      detail: "info@spi.org.au",
+    },
+    {
+      icon: <PhoneIcon sx={{ fontSize: 32 }} />,
+      title: "Phone",
+      detail: "+61 491 964 588",
+    },
+    {
+      icon: <LocationOnIcon sx={{ fontSize: 32 }} />,
+      title: "Location",
+      detail: "Gold Coast, Australia",
+    },
   ];
 
   return (
@@ -39,7 +59,7 @@ export default function ContactUs() {
         sx={{
           position: "relative",
           width: "100%",
-          height: '100vh',
+          height: "100vh",
           overflow: "hidden",
           backgroundImage: `url(${BannerImage})`,
           backgroundSize: "cover",
@@ -48,7 +68,13 @@ export default function ContactUs() {
         }}
       >
         {/* Dark overlay */}
-        <Box sx={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.4)" }} />
+        <Box
+          sx={{
+            position: "absolute",
+            inset: 0,
+            backgroundColor: "rgba(0,0,0,0.4)",
+          }}
+        />
 
         {/* Centered text */}
         <Box
@@ -88,16 +114,33 @@ export default function ContactUs() {
               fontSize: { xs: "1.2rem", md: "1.4rem" },
             }}
           >
-            The Surfers Paradise Institute aims to bring people together from across the Right. If you are interested in being involved in any way, please get in touch.
+            The Surfers Paradise Institute aims to bring people together from
+            across the Right. If you are interested in being involved in any
+            way, please get in touch.
           </Typography>
         </Box>
       </Box>
 
       {/* Contact Info Cards */}
       <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
-        <Grid container spacing={4} sx={{ mb: { xs: 8, md: 12 }, justifyContent: "center", alignItems: "stretch" }}>
+        <Grid
+          container
+          spacing={4}
+          sx={{
+            mb: { xs: 8, md: 12 },
+            justifyContent: "center",
+            alignItems: "stretch",
+          }}
+        >
           {contactInfo.map((info, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex", justifyContent: "center" }}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              key={index}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
               <Paper
                 elevation={0}
                 sx={{
@@ -121,10 +164,16 @@ export default function ContactUs() {
                 }}
               >
                 <Box sx={{ color: "primary.main", mb: 2 }}>{info.icon}</Box>
-                <Typography variant="h5" sx={{ color: "primary.main", mb: 1, fontWeight: 600 }}>
+                <Typography
+                  variant="h5"
+                  sx={{ color: "primary.main", mb: 1, fontWeight: 600 }}
+                >
                   {info.title}
                 </Typography>
-                <Typography variant="body1" sx={{ color: "text.secondary", wordBreak: "break-word" }}>
+                <Typography
+                  variant="body1"
+                  sx={{ color: "text.secondary", wordBreak: "break-word" }}
+                >
                   {info.detail}
                 </Typography>
               </Paper>
@@ -132,8 +181,51 @@ export default function ContactUs() {
           ))}
         </Grid>
 
-                {/* Contact Form */}
-        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 6, maxWidth: 600, mx: "auto" }}>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden">
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+          </p>
+
+          <p>
+            <label>
+              Your Name:
+              <input type="text" name="name" required />
+            </label>
+          </p>
+
+          <p>
+            <label>
+              Your Email:
+              <input type="email" name="email" required />
+            </label>
+          </p>
+
+          <p>
+            <label>
+              Message:
+              <textarea name="message" required></textarea>
+            </label>
+          </p>
+
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+
+        {/* Contact Form */}
+        <Box
+          component="form"
+          onSubmit={handleSubmit}
+          sx={{ mt: 6, maxWidth: 600, mx: "auto" }}
+        >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -176,7 +268,10 @@ export default function ContactUs() {
           </Grid>
 
           {submitted && (
-            <Typography variant="body1" sx={{ mt: 2, color: "success.main", textAlign: "center" }}>
+            <Typography
+              variant="body1"
+              sx={{ mt: 2, color: "success.main", textAlign: "center" }}
+            >
               Thank you! Your message has been sent.
             </Typography>
           )}
