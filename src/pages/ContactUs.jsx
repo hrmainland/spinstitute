@@ -189,7 +189,7 @@ export default function ContactUs() {
           netlify
         >
           <input type="hidden" name="form-name" value="contact" />
-          <p class="hidden">
+          <p className="hidden">
             <label>
               Don’t fill this out: <input name="bot-field" />
             </label>
