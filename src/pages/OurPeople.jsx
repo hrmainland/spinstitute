@@ -17,19 +17,19 @@ export default function OurPeople() {
       name: 'John Mainland',
       role: 'Executive Director',
       image: johnMainland,
-      bio: 'John is a commercial lawyer who has worked across the court system, politics, commerce and policy development. He has served as an executive in several Australian businesses and held leadership roles within the Liberal Party. A speaker of five languages, John holds two First Class Honours degrees in Law from the University of Oxford (LLB, BCL).',
+      bio: 'John is a commercial lawyer who has served as an executive in a number of Australian businesses and held leadership roles within the Liberal Party. A speaker of five languages, John holds two First Class Honours degrees in Law from the University of Oxford (LLB, BCL).',
     },
     {
       name: 'Justin McGovern',
       role: 'Deputy Executive Director',
       image: justinMcGovern,
-      bio: 'Justin is a seasoned commercial lawyer with extensive experience in government and policy. He has held senior advisory roles to Australian Government and served in the Royal Australian Air Force. Justin brings a deep understanding of regulatory frameworks, governance, and strategic decision-making across public and private sectors. He holds First Class degrees in Law and Arts, and was recently the recipient of the Ramsay Scholarship to the Oxford Master of Law (BCL).',
+      bio: 'Justin is a seasoned commercial lawyer with extensive experience in government and policy. He has held senior advisory roles to Australian Government and served in the RAAF. He holds First Class degrees in Law and Arts, was a Ramsay Scholar at the Oxford Master of Law (BCL).',
     },
     {
       name: 'Monica Lewis',
       role: 'Director of Research',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZsINAeXhg_aONZrbZrMTZEjopaRJ1xmlVA&s',
-      bio: 'Monica brings experience spanning consulting, banking, venture capital and strategy. She has held senior roles at Bain & Company, ANZ Ventures and Australian fintechs. Monica holds a Bachelor of Arts from the University of Sydney and completed the Venture Capital Executive Program at the University of California, Berkeley.',
+      bio: 'Monica brings experience spanning consulting, banking, venture capital and strategy. She has held senior roles at Bain & Company, ANZ Ventures and Australian fintechs. Monica has studied at the Universities of Sydney (BA) and California, Berkeley (VC Executive Program).,
     },
     {
       name: 'Brian Jackson',
@@ -41,13 +41,13 @@ export default function OurPeople() {
       name: 'Drew Pavlou',
       role: 'Director of Media and Outreach',
       image: drewPavlou,
-      bio: 'Drew is an activist and media personality, known for critiquing communist and authoritarian governments. He has been retweeted by Elon Musk and JD Vance, and featured in global outlets including The New York Times, advocating for human rights, free speech, and democratic reform on the international stage..',
+      bio: 'Drew is an activist and media personality, known for his vociferous criticism of communist and authoritarian governments. He has been retweeted by Elon Musk and JD Vance, and featured in outlets including The New York Times, the Australian and the Spectator.',
     },
     {
       name: 'Will Bennett',
       role: 'Board Secretary',
       image: willBennett,
-      bio: 'Will is a journalist and policy specialist with experience across media, government, and the private sector. He has written for The Spectator, the AFR, and Forbes in New York, and has worked as a policy adviser and consultant. He holds master’s degrees from New York University (Business and Economic Reporting) and the University of Cambridge (MPP).',
+      bio: 'Will is a journalist and policy specialist with experience across media, government, and the private sector. He has written for The Spectator, the AFR, and Forbes in New York, and has worked as a policy adviser and consultant. He holds a policy Masters from Cambridge (MPP).',
     },
   ];
 
