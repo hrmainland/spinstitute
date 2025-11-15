@@ -42,7 +42,7 @@ export default function OurPeople() {
       name: 'Drew Pavlou',
       role: 'Director of Media and Outreach',
       image: drewPavlou,
-      bio: 'Drew is an activist and media personality, known for his vociferous criticism of communist and authoritarian governments. He has been retweeted by Elon Musk and JD Vance, and featured in outlets including The New York Times, the Australian and the Spectator.',
+      bio: 'Drew is an activist and media personality, known for his outspoken criticism of authoritarian governments. His work has drawn recognition from figures such as Elon Musk and JD Vance, and featured in outlets including The New York Times, the Australian and the Spectator.',
     },
     {
       name: 'Will Bennett',
