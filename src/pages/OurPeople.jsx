@@ -7,6 +7,7 @@ import justinMcGovern from '../assets/Justin-McGovern.jpg';
 import willBennett from '../assets/Will-Bennett.jpg';
 import brianJackson from '../assets/1000029810.jpg';
 import drewPavlou from '../assets/Drew-Pavlou.jpg';
+import monicaLewis from '../assets/MonicaLewis.jpg';
 
 // === Full-width banner image ===
 import bannerImage from '../assets/surf_life_saving_nsw_cover.jpg';
@@ -28,7 +29,7 @@ export default function OurPeople() {
     {
       name: 'Monica Lewis',
       role: 'Director of Research',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZsINAeXhg_aONZrbZrMTZEjopaRJ1xmlVA&s',
+      image: monicaLewis,
       bio: 'Monica brings experience spanning consulting, banking, venture capital and strategy. She has held senior roles at Bain & Company, ANZ Ventures and Australian fintechs. Monica has studied at the Universities of Sydney (BA) and California, Berkeley (VC Executive Program).',
     },
     {
