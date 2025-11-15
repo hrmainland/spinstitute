@@ -3,11 +3,11 @@ import { Box, Container, Typography } from '@mui/material';
 
 export default function MissionStatement() {
   const missionPoints = [
-    "Overhaul Australia's immigration and asylum policies to significantly reduce inbound migration to Australia.",
-    "Unleash Australian energy production to reduce energy prices.",
-    "Dramatically increase housing supply through increased construction, and immigration cuts.",
-    "Tackle the lack of democratic accountability in federal and state bureaucracies to align departmental outcomes with public policy preferences.",
-    "Tackle anti-Australianism in our education system through overhaul of our education institutions and curriculum."
+    "Reform immigration policy for a sustainable, socially cohesive Australia.",
+    "Restore the dream of home ownership through both supply and demand side reforms.",
+    "Reduce energy prices for cost of living relief and economic prosperity.",
+    "Reinforce democratic accountability of our federal and state bureaucracies.",
+    "Revive the purpose and integrity of our educational institutions."
   ];
 
   return (
