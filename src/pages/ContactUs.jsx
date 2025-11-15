@@ -216,63 +216,6 @@ export default function ContactUs() {
             <button type="submit">Send</button>
           </p>
         </form>
-
-        {/* Contact Form */}
-        <Box
-          component="form"
-          onSubmit={handleSubmit}
-          sx={{ mt: 6, maxWidth: 600, mx: "auto" }}
-        >
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                fullWidth
-                label="Name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                fullWidth
-                label="Email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label="Message"
-                name="message"
-                multiline
-                rows={4}
-                value={formData.message}
-                onChange={handleChange}
-                required
-              />
-            </Grid>
-            <Grid item xs={12} sx={{ textAlign: "center" }}>
-              <Button type="submit" variant="contained" color="primary">
-                Send Message
-              </Button>
-            </Grid>
-          </Grid>
-
-          {submitted && (
-            <Typography
-              variant="body1"
-              sx={{ mt: 2, color: "success.main", textAlign: "center" }}
-            >
-              Thank you! Your message has been sent.
-            </Typography>
-          )}
-        </Box>
       </Container>
     </Box>
   );
