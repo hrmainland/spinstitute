@@ -189,6 +189,8 @@ export default function ContactUs() {
           action="/success"
         >
           <input type="hidden" name="form-name" value="contact" />
+
+          <input type="hidden" name="form-name" value="contact" />
           <p className="hidden">
             <label>
               Don’t fill this out: <input name="bot-field" />
