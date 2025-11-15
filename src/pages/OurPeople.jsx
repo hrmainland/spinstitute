@@ -17,7 +17,7 @@ export default function OurPeople() {
       name: 'John Mainland',
       role: 'Executive Director',
       image: johnMainland,
-      bio: 'John is a commercial lawyer who has served as an executive in a number of Australian businesses and held leadership roles within the Liberal Party. A speaker of five languages, John holds two First Class Honours degrees in Law from the University of Oxford (LLB, BCL).',
+      bio: 'John is a commercial litigator who has served as an executive in a number of Australian businesses and held leadership roles within the Liberal Party. A speaker of five languages, John holds two First Class Honours degrees in Law from the University of Oxford (LLB, BCL).',
     },
     {
       name: 'Justin McGovern',
@@ -29,7 +29,7 @@ export default function OurPeople() {
       name: 'Monica Lewis',
       role: 'Director of Research',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZsINAeXhg_aONZrbZrMTZEjopaRJ1xmlVA&s',
-      bio: 'Monica brings experience spanning consulting, banking, venture capital and strategy. She has held senior roles at Bain & Company, ANZ Ventures and Australian fintechs. Monica has studied at the Universities of Sydney (BA) and California, Berkeley (VC Executive Program).,
+      bio: 'Monica brings experience spanning consulting, banking, venture capital and strategy. She has held senior roles at Bain & Company, ANZ Ventures and Australian fintechs. Monica has studied at the Universities of Sydney (BA) and California, Berkeley (VC Executive Program).',
     },
     {
       name: 'Brian Jackson',
