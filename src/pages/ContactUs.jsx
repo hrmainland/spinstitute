@@ -12,6 +12,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import BannerImage from "../assets/beach-aerial.jpg"; // uploaded banner image
+import "../styles/ContactForm.css";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -181,41 +182,66 @@ export default function ContactUs() {
           ))}
         </Grid>
 
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/success"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="bot-field" />
+        <div className="contact-form-wrapper">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/success"
+            className="contact-form"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden-field">
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
 
-          <p>
-            <label>
-              Your Name:
-              <input type="text" name="name" required />
-            </label>
-          </p>
+            <h2 className="contact-form-title">Get in Touch</h2>
+            <p className="contact-form-subtitle">
+              Fill out the form below and we'll get back to you as soon as possible
+            </p>
 
-          <p>
-            <label>
-              Your Email:
-              <input type="email" name="email" required />
-            </label>
-          </p>
+            <div className="form-field">
+              <label htmlFor="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="John Smith"
+                required
+              />
+            </div>
 
-          <p>
-            <label>
-              Message:
-              <textarea name="message" required></textarea>
-            </label>
-          </p>
+            <div className="form-field">
+              <label htmlFor="email">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="john@example.com"
+                required
+              />
+            </div>
 
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+            <div className="form-field">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us how you'd like to get involved or any questions you may have..."
+                required
+              ></textarea>
+            </div>
+
+            <div className="form-submit-wrapper">
+              <button type="submit" className="form-submit-button">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
       </Container>
     </Box>
   );

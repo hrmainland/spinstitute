@@ -1,0 +1,154 @@
+/* Contact Form Styling */
+.contact-form-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.contact-form {
+  background: white;
+  border-radius: 16px;
+  padding: 48px 40px;
+  box-shadow: 0 4px 24px rgba(27, 60, 83, 0.08);
+  border: 1px solid rgba(210, 193, 182, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+  box-shadow: 0 8px 32px rgba(27, 60, 83, 0.12);
+  border-color: rgba(210, 193, 182, 0.5);
+}
+
+.contact-form-title {
+  color: #1B3C53;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.contact-form-subtitle {
+  color: #456882;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.form-field {
+  margin-bottom: 24px;
+}
+
+.form-field label {
+  display: block;
+  color: #234C6A;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #D2C1B6;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #1B3C53;
+  background: white;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-field input[type="text"]:focus,
+.form-field input[type="email"]:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: #234C6A;
+  box-shadow: 0 0 0 3px rgba(35, 76, 106, 0.1);
+}
+
+.form-field input[type="text"]::placeholder,
+.form-field input[type="email"]::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(69, 104, 130, 0.5);
+}
+
+.form-field textarea {
+  min-height: 160px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.form-submit-wrapper {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.form-submit-button {
+  background: linear-gradient(135deg, #234C6A 0%, #1B3C53 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 48px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(27, 60, 83, 0.2);
+}
+
+.form-submit-button:hover {
+  background: linear-gradient(135deg, #1B3C53 0%, #234C6A 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(27, 60, 83, 0.3);
+}
+
+.form-submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(27, 60, 83, 0.2);
+}
+
+/* Hide honeypot field */
+.hidden-field {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 32px 24px;
+  }
+
+  .contact-form-title {
+    font-size: 1.75rem;
+  }
+
+  .form-submit-button {
+    width: 100%;
+    padding: 14px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-wrapper {
+    padding: 0 8px;
+  }
+
+  .contact-form {
+    padding: 24px 20px;
+  }
+
+  .contact-form-title {
+    font-size: 1.5rem;
+  }
+
+  .form-field {
+    margin-bottom: 20px;
+  }
+}
