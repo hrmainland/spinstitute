@@ -186,7 +186,7 @@ export default function ContactUs() {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          netlify
+          action="/success"
         >
           <input type="hidden" name="form-name" value="contact" />
           <p className="hidden">
