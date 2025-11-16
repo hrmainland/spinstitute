@@ -36,7 +36,7 @@ export default function OurPeople() {
       name: 'Brian Jackson',
       role: 'Director of Finance',
       image: brianJackson,
-      bio: 'Brian is an economist who brings over 20 years of global experience in economic policy, market analysis, and strategy. He has worked for the Reserve Bank of Australia, the Bank of England, the Federal Reserve, as well as in private banking, investment banking, and hedge funds.',
+      bio: 'Brian is an economist who brings over 20 years of global experience in economic policy, market analysis, and strategy. He has worked for the Australian Treasury, the Bank of England, and the US Federal Reserve, as well as in private banking, investment banking, and hedge funds.',
     },
     {
       name: 'Drew Pavlou',
