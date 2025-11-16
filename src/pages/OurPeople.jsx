@@ -18,13 +18,13 @@ export default function OurPeople() {
       name: 'John Mainland',
       role: 'Executive Director',
       image: johnMainland,
-      bio: 'John is a commercial litigator who has served as an executive in a number of Australian businesses and held leadership roles within the Liberal Party. A speaker of five languages, John holds two First Class Honours degrees in Law from the University of Oxford (LLB, BCL).',
+      bio: 'John is a commercial litigator who has served as an executive in a number of Australian businesses and held leadership roles within the Liberal Party. A speaker of five languages, John holds two First Class Honours degrees in Law from the University of Oxford (BA (Juris.), BCL).',
     },
     {
       name: 'Justin McGovern',
       role: 'Deputy Executive Director',
       image: justinMcGovern,
-      bio: 'Justin is a seasoned commercial lawyer with extensive experience in government and policy. He has held senior advisory roles to Australian Government and served in the RAAF. He holds First Class degrees in Law and Arts, was a Ramsay Scholar at the Oxford Master of Law (BCL).',
+      bio: 'Justin is a seasoned commercial lawyer with extensive experience in government and policy. He has held senior advisory roles to Australian Government and served in the RAAF. He holds First Class degrees in Law and Arts, and was a Ramsay Scholar for the Oxford Bachelor of Civil Law (BCL).',
     },
     {
       name: 'Monica Lewis',
