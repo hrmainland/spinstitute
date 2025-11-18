@@ -21,7 +21,7 @@ export default function OurWork() {
   const reports = [
     {
       title: 'How We Win',
-      description: 'Comprehensive overview of the strategic steps required for a National Conservative party to take power.',
+      description: 'Our comprehensive overview of how common sense patriotic policies can win at the ballot box.',
       url: 'https://www.sample-pdf.com/2024-impact-report.pdf',
     },
     {
@@ -36,7 +36,7 @@ export default function OurWork() {
     },
     {
       title: 'Our Vision on Housing',
-      description: 'How do we restore the dream of home ownership for a new generation of Australians?.',
+      description: 'How do we make buying a home achievable for a new generation of Australians?',
       url: 'https://www.example.com/case-studies',
     },
   ];
