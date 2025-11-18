@@ -1,9 +1,23 @@
-import React from 'react';
-import { Container, Typography, Box, Paper, Link as MuiLink } from '@mui/material';
+import React, { useState } from 'react';
+import { Container, Typography, Box, Paper, Link as MuiLink, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import BannerImage from '../assets/city-from-beach.jpg'; // your uploaded banner image
+import ReportRequestDialog from '../components/ReportRequestDialog';
 
 export default function OurWork() {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [selectedReport, setSelectedReport] = useState('');
+
+  const handleOpenDialog = (reportTitle) => {
+    setSelectedReport(reportTitle);
+    setDialogOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setDialogOpen(false);
+    setSelectedReport('');
+  };
+
   const reports = [
     {
       title: 'How We Win',
@@ -142,10 +156,8 @@ export default function OurWork() {
                   {report.description}
                 </Typography>
               </Box>
-              <MuiLink
-                href={report.url}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Button
+                onClick={() => handleOpenDialog(report.title)}
                 sx={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -156,8 +168,10 @@ export default function OurWork() {
                   fontSize: '1rem',
                   whiteSpace: 'nowrap',
                   flexShrink: 0,
+                  textTransform: 'none',
                   '&:hover': {
                     color: 'primary.main',
+                    backgroundColor: 'transparent',
                     '& svg': { transform: 'translateX(4px)' },
                   },
                   transition: 'color 0.3s ease',
@@ -165,11 +179,17 @@ export default function OurWork() {
               >
                 Request Report
                 <ArrowForwardIcon sx={{ fontSize: '1.2rem', transition: 'transform 0.3s ease' }} />
-              </MuiLink>
+              </Button>
             </Paper>
           ))}
         </Box>
       </Container>
+
+      <ReportRequestDialog
+        open={dialogOpen}
+        onClose={handleCloseDialog}
+        reportTitle={selectedReport}
+      />
     </Box>
   );
 }
