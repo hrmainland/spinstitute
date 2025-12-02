@@ -21,7 +21,7 @@ export default function OurWork() {
   const reports = [
     {
       title: 'Our Policy Positions',
-      description: 'If you're interested in a conversation on our policy ambitions, please submit this form and we will be in touch',
+      description: 'If you are interested in a conversation on our policy ambitions, please submit this form and we will be in touch',
       url: 'https://www.example.com/case-studies',
     },
   ];
