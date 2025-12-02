@@ -20,23 +20,8 @@ export default function OurWork() {
 
   const reports = [
     {
-      title: 'How We Win',
-      description: 'Our comprehensive overview of how common sense patriotic policies can win at the ballot box.',
-      url: 'https://www.sample-pdf.com/2024-impact-report.pdf',
-    },
-    {
-      title: 'Our Vision on Immigration',
-      description: 'A deep-dive on renewed immigration policy for a cohesive, prosperous and self-confident Australia.',
-      url: 'https://www.example.com/strategic-overview',
-    },
-    {
-      title: 'Our Vision on Energy',
-      description: 'Policy recommendations to unleash Australian energy production for households and businesses.',
-      url: 'https://www.example.com/research',
-    },
-    {
-      title: 'Our Vision on Housing',
-      description: 'How do we make buying a home achievable for a new generation of Australians?',
+      title: 'Our Policy Positions',
+      description: 'If you're interested in a conversation on our policy ambitions, please submit this form and we will be in touch',
       url: 'https://www.example.com/case-studies',
     },
   ];
@@ -103,7 +88,7 @@ export default function OurWork() {
               fontSize: { xs: '1.2rem', md: '1.4rem' },
             }}
           >
-            We are proud to share our latest reports and research. For more information, please get in contact with us directly.
+            Watch this space! We are working on a number of initial policy and strategy documents ahead of our formal launch in early 2026. For more information, or if you are interested in being involved, please get in touch. 
           </Typography>
         </Box>
       </Box>
