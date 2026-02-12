@@ -27,28 +27,28 @@ export default function OurPeople() {
       bio: 'Justin is a seasoned commercial lawyer with extensive experience in government and policy. He has held senior advisory roles to Australian Government and served in the RAAF. He holds First Class degrees in Law and Arts, and was a Ramsay Scholar for the Oxford Bachelor of Civil Law (BCL).',
     },
     {
-      name: 'Monica Lewis',
-      role: 'Director of Research',
-      image: monicaLewis,
-      bio: 'Monica brings experience spanning consulting, banking, venture capital and strategy. She has held senior roles at Bain & Company, ANZ Ventures and Australian fintechs. Monica has studied at the Universities of Sydney (BA) and California, Berkeley (VC Executive Program).',
-    },
-    {
       name: 'Brian Jackson',
       role: 'Director of Finance',
       image: brianJackson,
       bio: 'Brian is an economist who brings over 20 years of global experience in economic policy, market analysis, and strategy. He has worked for the Australian Treasury, the Bank of England, and the US Federal Reserve, as well as in private banking, investment banking, and hedge funds.',
     },
     {
-      name: 'Drew Pavlou',
-      role: 'Director of Media and Outreach',
-      image: drewPavlou,
-      bio: 'Drew is an activist and media personality, known for his outspoken criticism of authoritarian governments. His work has drawn recognition from figures such as Elon Musk and JD Vance, and featured in outlets including The New York Times, the Australian and the Spectator.',
+      name: 'Monica Lewis',
+      role: 'Director',
+      image: monicaLewis,
+      bio: 'Monica brings experience spanning consulting, banking, venture capital and strategy. She has held senior roles at Bain & Company, ANZ Ventures and Australian fintechs. Monica has studied at the Universities of Sydney (BA) and California, Berkeley (VC Executive Program).',
     },
     {
       name: 'Will Bennett',
-      role: 'Board Secretary',
+      role: 'Director',
       image: willBennett,
       bio: 'Will is a journalist and policy specialist with experience across media, government, and the private sector. He has written for The Spectator, the AFR, and Forbes in New York, and has worked as a policy adviser and consultant. He holds a policy Masters from Cambridge (MPP).',
+    },
+    {
+      name: 'Drew Pavlou',
+      role: 'Mission Ambassador',
+      image: drewPavlou,
+      bio: 'Drew is an activist and media personality, known for his outspoken criticism of authoritarian governments. His work has drawn recognition from figures such as Elon Musk and JD Vance, and featured in outlets including The New York Times, the Australian and the Spectator.',
     },
   ];
 
