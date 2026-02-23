@@ -21,7 +21,7 @@ export default function OurWork() {
   const reports = [
     {
       title: 'Our Policy Positions',
-      description: 'If you are interested in a conversation on our policy ambitions, please submit this form and we will be in touch',
+      description: 'If you are interested in a conversation on our policy proposals, please submit this form and we will be in touch',
       url: 'https://www.example.com/case-studies',
     },
   ];
@@ -88,7 +88,7 @@ export default function OurWork() {
               fontSize: { xs: '1.2rem', md: '1.4rem' },
             }}
           >
-            Watch this space! We are working on a number of initial policy and strategy documents ahead of our formal launch in early 2026. For more information, or if you are interested in being involved, please get in touch. 
+            We share our work directly with political parties, think tanks and researchers. For more information, or if you are interested in being involved, please get in touch. 
           </Typography>
         </Box>
       </Box>
