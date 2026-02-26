@@ -6,7 +6,6 @@ import johnMainland from '../assets/johnmainland.jpg';
 import justinMcGovern from '../assets/Justin-McGovern.jpg';
 import willBennett from '../assets/Will-Bennett.jpg';
 import brianJackson from '../assets/1000029810.jpg';
-import drewPavlou from '../assets/Drew-Pavlou.jpg';
 import monicaLewis from '../assets/MonicaLewis.jpg';
 
 // === Full-width banner image ===
@@ -43,13 +42,7 @@ export default function OurPeople() {
       role: 'Director',
       image: willBennett,
       bio: 'Will is a journalist and policy specialist with experience across media, government, and the private sector. He has written for The Spectator, the AFR, and Forbes in New York, and has worked as a policy adviser and consultant. He holds a policy Masters from Cambridge (MPP).',
-    },
-    {
-      name: 'Drew Pavlou',
-      role: 'Mission Ambassador',
-      image: drewPavlou,
-      bio: 'Drew is an activist and media personality, known for his outspoken criticism of authoritarian governments. His work has drawn recognition from figures such as Elon Musk and JD Vance, and featured in outlets including The New York Times, the Australian and the Spectator.',
-    },
+    },    
   ];
 
   return (
